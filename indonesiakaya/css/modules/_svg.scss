@@ -1,0 +1,17 @@
+.svg{
+    fill:#fff;
+    stroke: #fff;
+
+    &__arrow{
+        width: 11px;
+        height: 9px;    
+        fill: none;
+    }
+    &__arrowGray{
+        stroke: $color__gray;
+    }
+    &__bulletin{
+        fill:none;
+        stroke: $color__gray;
+    }
+}

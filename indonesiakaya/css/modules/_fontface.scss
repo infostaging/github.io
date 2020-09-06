@@ -1,0 +1,70 @@
+@font-face {
+    font-family: 'EideticNeo';
+    src: url('../fonts/EideticNeo-BoldItalic.woff2') format('woff2'),
+        url('../fonts/EideticNeo-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EideticNeo';
+    src: url('../fonts/EideticNeo-Italic.woff2') format('woff2'),
+        url('../fonts/EideticNeo-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EideticNeo';
+    src: url('../fonts/EideticNeo-Bold.woff2') format('woff2'),
+        url('../fonts/EideticNeo-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EideticNeo';
+    src: url('../fonts/EideticNeo.woff2') format('woff2'),
+        url('../fonts/EideticNeo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'EideticNeoRegular';
+    src: url('../fonts/EideticNeoRegular.woff2') format('woff2'),
+        url('../fonts/EideticNeoRegular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Book.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Futura PT';
+    src: url('../fonts/FuturaPT-Medium.woff2') format('woff2'),
+        url('../fonts/FuturaPT-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+//extend
+.font1{
+    font-family: $font__1 !important;
+}
+.font2{
+    font-family: $font__2 !important;
+}

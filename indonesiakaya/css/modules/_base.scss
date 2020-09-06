@@ -1,0 +1,45 @@
+//screen
+$xl:1280px;
+$lg:1140px;
+$md:992px;
+$sm:768px;
+$xs:360px;
+$xxs:320px;
+
+// media
+@mixin max-responsive ($media) {
+    @media (max-width: $media) { @content; }
+}   
+@mixin min-responsive ($media) {
+    @media (min-width: $media) { @content; }
+}
+@mixin range-responsive ($media, $media2) {
+    @media (min-width: $media) and (max-width: $media2) { @content; }
+}
+
+@mixin base_transition($t) {
+    -webkit-transition: $t 0.2s ease;
+    -moz-transition: $t 0.2s ease;
+    -ms-transition: $t 0.2s ease;
+    -o-transition: $t 0.2s ease;
+    transition: $t 0.2s ease;
+}
+
+//fonts
+$font__1: Futura PT;
+$font__2: EideticNeo; 
+
+//color
+$color__orange:#D0542D;
+$color__orange2:#E58409;
+$color__blue:#296EBB;
+$color__gray:#333333;
+$color__gray2:#E0E0E0; 
+$color__gray3:#F2F2F2; 
+$color__gray4:#828282; 
+$color__gray5:#BDBDBD; 
+$color__gray6:#4F4F4F; 
+$color__green:#277633; 
+$color__green2:#59A65E; 
+$color__greenpastle:#32C1AE; 
+$color__purple:#79318D; 

@@ -1,0 +1,13 @@
+.footer{
+	background: #000;
+
+	h5{
+		font-size: 18px;
+		
+	}
+	ul{
+		li{
+			@extend .color__gray5;
+		}
+	}
+}
