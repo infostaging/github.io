@@ -44,7 +44,7 @@ $(document).ready(function(){
         if (prevScrollpos > currentScrollPos) {
             document.querySelector(".header").style.top = "0";
         } else {
-            document.querySelector(".header").style.top = "-83px";
+            document.querySelector(".header").style.top = "-75px";
         }
         prevScrollpos = currentScrollPos;
     }
@@ -71,7 +71,7 @@ $(document).ready(function(){
             $(this).children().attr('src', "images/svg/icon__menuMobile.svg");
            
             $(".nav").css("display","none");
-            $("body").css("overflow","scroll");
+            $("body").css("overflow-y","scroll");
             console.log("1");
         } 
       });

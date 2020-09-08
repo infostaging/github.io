@@ -1,6 +1,7 @@
 .footer{
 	background: #000;
-
+	position: relative;
+	
 	h5{
 		font-size: 18px;
 		
@@ -8,6 +9,14 @@
 	ul{
 		li{
 			@extend .color__gray5;
+		}
+	}
+
+	&__subscribe{
+		@include min-responsive($md){
+			position: absolute;
+			left: 0;
+			bottom: 50px;
 		}
 	}
 }

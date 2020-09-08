@@ -1,5 +1,4 @@
 //screen
-$xl:1280px;
 $lg:1140px;
 $md:992px;
 $sm:768px;
@@ -15,6 +14,20 @@ $xxs:320px;
 }
 @mixin range-responsive ($media, $media2) {
     @media (min-width: $media) and (max-width: $media2) { @content; }
+}
+
+@mixin max-portrait ($media) {
+    @media  (max-device-width: $media) and (orientation: portrait) {  @content; }
+}
+@mixin min-portrait ($media) {
+    @media  (min-device-width: $media) and (orientation:portrait) {  @content; }
+}
+
+@mixin max-lanscape ($media) {
+    @media  (max-device-width: $media) and (orientation: landscape) {  @content; }
+}
+@mixin min-lanscape ($media) {
+    @media  (min-device-width: $media) and (orientation: landscape) {  @content; }
 }
 
 @mixin base_transition($t) {
@@ -39,6 +52,7 @@ $color__gray3:#F2F2F2;
 $color__gray4:#828282; 
 $color__gray5:#BDBDBD; 
 $color__gray6:#4F4F4F; 
+$color__gray7:#7B7B7B; 
 $color__green:#277633; 
 $color__green2:#59A65E; 
 $color__greenpastle:#32C1AE; 

@@ -8,6 +8,12 @@
 	z-index: 99999;
 	@include base_transition(all);
 	
+	
+		@include min-responsive($md){
+			border-bottom: 1px solid $color__gray6;
+		}
+
+
 	img{
 		width: auto;
 	}
@@ -22,6 +28,11 @@
 
 	&__search{
 		text-align: right;
+	}
+	&__home{
+		@include max-responsive($sm){
+			display: none;
+		}
 	}
 }
 

@@ -1,8 +1,6 @@
 .container{  
     padding: 0;      
-    @include min-responsive($md){
-        max-width: 640px;
-    }
+    max-width: 1440px ;    
 }
 
 .main{
@@ -10,10 +8,38 @@
 }
 
 .section{
-    
+    position: relative;
 
     h2,h4{
-        border-bottom: 1px solid $color__gray;
+        //border-bottom: 1px solid $color__gray;
+    }
+    h2{
+        border-bottom:0;
+    }
+
+    h2{
+        font-size: 28px;
+        @include min-responsive($md){
+            font-size: 36px;
+        }
+    }
+    h4{
+        font-size: 16px;
+        @include min-responsive($md){
+            font-size: 24px;
+        }
+    }
+
+    p.position__absolute{
+
+        margin:0;
+        top: 70px;
+
+        @include min-responsive($md){
+            font-size: 24px;
+            top: 120px;
+        }
+        
     }
 
     &__text{
@@ -22,11 +48,19 @@
             font-size: 16px;
             display: block;
             font-weight: 500;
+            @include min-responsive($sm){
+                font-size: 18px;
+            }
         }
 
         h3{
             font-size: 28px;
             font-family: $font__2;
+            
+            @include min-responsive($sm){
+                font-size: 40px;
+                line-height: 42px;
+            }
         }
         h5{
             font-size: 24px;
@@ -57,7 +91,7 @@
     }
 
     &__img{
-
+        @extend .imgfill;
     }
 
     &__item{
@@ -69,86 +103,110 @@
                 display: block;
             }
         }
+
+
+
     }
 
     &__feed{   
 
 
         &__item{            
-
             
-            &:not(:first-child){
-                display: flex;
-                flex-direction: row-reverse;
-                flex-wrap: wrap;
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
 
-                & .section__img{
-                    width: 50%;        
-                    overflow: hidden;  
+            @include min-responsive($md){
+                display: block;
+            }
+
+    
+            & .section__text{
+
+                h3{
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    overflow: hidden;
+                    -webkit-line-clamp: 4;
+                    -webkit-box-orient: vertical;
+                    display: -webkit-box;
+                    @include min-responsive($sm){
+                        font-size: 24px;
+                        line-height: 130%;
+                    }
                 }
-        
-                & .section__text{
-                    width: 50%;
 
-                    h3{
-                        font-style: normal;
-                        font-weight: 500;
-                        font-size: 16px;
-                    }
-                    p{
-                        display: none;
-                    }
-                    small{
-                        font-size: 14px;
+                small{
+                    font-size: 14px;
+                    @include min-responsive($sm){
+                        font-size: 18px;
                     }
                 }
             }
-            
+
             hr{
                 height: 1px;
                 background:$color__gray;
                 border: none;
                 width: 100%;
+
+                @include min-responsive($md){
+                    display: none;
+                }
+                
             }
 
+            
             &:last-child{
+
                 hr{
                     height: 0;
                 }
             }
-        }
-
-        &--all{
-            & .section__feed__item{
-                &:first-child{
-                    display: flex;
-                    flex-direction: row-reverse;
-                    flex-wrap: wrap;
-    
-                    & .section__img{
-                        width: 50%;        
-                        overflow: hidden;  
-                        margin-bottom: 0;
-                    }
             
-                    & .section__text{
-                        width: 50%;
-    
-                        h3{
-                            font-style: normal;
-                            font-weight: 500;
-                            font-size: 16px;
+            &--big{
+                
+                & .section__text{
+                    h3{
+                        font-size: 28px;
+                        font-family: $font__2;
+                        
+                        @include min-responsive($sm){
+                            font-size: 40px;
+                            line-height: 42px;
                         }
-                        p{
-                            display: none;
-                        }
-                        small{
-                            font-size: 14px;
-                        }
+                    }
+                    p{
+                        display: block;
+                    }
+                }
+
+                hr{
+                    height: 1px !important;
+        
+                    @include min-responsive($md){
+                        display: none !important;
                     }
                 }
             }
+
+            &--galeri{
+
+                & .section__img{
+                    @include min-responsive($md){
+                        height: 500px; 
+                    }
+                    img{
+                        @extend .imgfill;
+                    }
+                }
+
+            }
+
         }
+
 
         &--video{
 
@@ -169,8 +227,21 @@
                         width: 40px;
                     }
                 }
+
+                &--big{
+                    span{
+
+                        img{
+                            @include min-responsive($md){
+                                width: 75px;
+                            }
+                        }
+                    }
+                }
             }
         }
+
+ 
 
     }
     
@@ -179,10 +250,13 @@
         color: $color__gray;
 
         h2{
-            border-bottom: 1px solid $color__gray5;
+            //border-bottom: 1px solid $color__gray5;
         }
         h4{
             border-bottom: 1px solid $color__gray2;
+            @include min-responsive($md){
+                border:0;
+            }
         }
         hr{
             background:$color__gray2;
@@ -243,11 +317,16 @@
 
     &__green{
         border-top: 5px solid $color__green;
-       
-        & .section__img{
+        
+        & .tokoh__small .section__img{
             -webkit-box-shadow: 0px 5px 0px 0px $color__green;
             -moz-box-shadow: 0px 5px 0px 0px $color__green;
-            box-shadow: 0px 5px 0px 0px $color__green;        
+            box-shadow: 0px 5px 0px 0px $color__green;     
+            border:0;   
+        }
+
+        & .section__img{
+            border-bottom: 5px solid $color__green;
         }
           
         & .section__text{
@@ -318,10 +397,10 @@
         &__img{
             height: 70vh;
             position: relative;
-            margin-top: 83px;
+            margin-top: 75px;
 
             @include min-responsive($sm){
-                height: 80vh;
+                height: 85vh;
             }
         }
         
@@ -352,6 +431,21 @@
 
     & .slick-dots {
         bottom: 180px;
+
+      
+        @include min-responsive($sm){
+            bottom: 25%;
+           
+        }
+        @include min-responsive($md){
+            bottom: 20%;
+            padding: 0 3rem !important;
+        }
+        @include min-responsive($lg){
+            bottom: 25%;
+        }
+
+
     }   
     & .slick-dots li.slick-active  button:before {
         color: #fff;
@@ -360,24 +454,87 @@
 
 .tokoh{
     color:#fff;
-    font-weight: 500;
+    font-weight: 500;   
 
+    
     &__title{
+        z-index: 10;
+
+        @include min-responsive($md){
+            position: relative;
+            
+            h2{
+                border: none;
+            }
+        }
+
+        p{
+            margin:0;
+            top: 70px;
+
+            @include min-responsive($md){
+                font-size: 24px;
+                top: 120px;
+            }
+        }
+    }
+
+    & .section__img{
+        @extend .imgfill;
+        height: 100%;
+        overflow: hidden;
+
+        img{
+            filter: grayscale(100%);
+        }
+    }
+    & .section__text{
         position: absolute;
-        top: 0;
-        z-index: 2;
+        bottom: 0;
+        left: 0;
+
+
+        
     }
 
     &__big{
-  
+        margin-top: -69px;
+        @include min-responsive($md){
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            margin-top: 0;
+        }
         & .section__img{
             height: 480px;
             box-shadow:none;
             @extend .imgfill;
 
             @include min-responsive($sm){
-                height: auto;
+                height: 684px;
+            }           
+        }
+        & .section__text{
+            @include min-responsive($md){
+                position: relative;
+                background: #000;
             }
+
+            small{
+                @extend .color__green2;
+            }
+
+     
+        }
+
+        &__shadow{
+            bottom: 0;
+            left: 0;
+            height: 170px;
+        }
+        &__Topshadow{
+            top: 0;
+            left: 0;
+            height: 150px;
         }
     }
 
@@ -390,30 +547,46 @@
         overflow-y: hidden;
         margin-top: -40px;
 
+        @include min-responsive($md){
+            overflow: hidden;
+            margin-top: -110px;
+        }
+
         & > div{
             max-width: 50%;
             flex-basis: 40%;
             flex-grow: 0;
             flex-shrink: 0;
+
+            @include min-responsive($md){
+                height: 100%;
+                flex-shrink: unset;
+
+                &:last-child{
+                    margin-right:0 !important;
+                }
+            }
         }
 
         h3{
             font-size: 16px;
+            @include min-responsive($md){
+                font-size: 18px;
+                line-height: 19px;
+            }
+        }
+        small{
+            font-size: 12px;
+            @include min-responsive($md){
+                font-size: 14px;
+            }
         }
         p{
             font-size: 12px;
         }
     }
 
-    & .section__text{
-        position: absolute;
-        bottom: 0;
-        left: 0;
-
-        p{
-            @extend .color__green2;
-        }
-    }
+    
 }
 
 .agenda{
@@ -427,26 +600,57 @@
         display: flex;
         align-items: center;
 
+        @include min-responsive($md){
+            height: 700px;
+        }
+
         img{
             max-width: 60%;
             margin: 0 auto;
             max-height: 100%;
             width: auto;
+            height: auto;
+        }
+    }
+
+    & .btn{
+
+        @include min-responsive($md){
+            bottom: 100px;
         }
     }
 
     & .slick-dots li.slick-active  button:before {
        @extend .color__purple;
+
+       @include min-responsive($md){
+            color: #fff;
+       }
     }
     & .slick-dots li button:before {
        @extend .color__gray2;
+       @include min-responsive($md){
+           color: $color__gray7;
+       }
     }
     & .slick-dots {
         top: 370px;
         bottom: auto;
+        @include min-responsive($md){
+            top: auto;
+            bottom: 25px;
+        }
     }
     & .slick-arrow{
         top: 29%;
+        @include min-responsive($md){
+            display: none !important;
+        }
+    }
+    & .slick-initialized .slick-slide {
+      @include min-responsive($md){
+        display: flex;
+      }
     }
 }
 
@@ -460,9 +664,22 @@
         top: 25px;
         width: 115px;
         height: 115px;
+
+        @include min-responsive($md){
+            right: 0;
+            top: 10px;
+        }
+    }
+    h3{
+        @include min-responsive($md){
+            font-size: 32px;
+        }
     }
     p{
         font-size: 14px;
+        @include min-responsive($md){
+            font-size: 18px;
+        }
     }
 
     button{
@@ -512,5 +729,18 @@
         display: flex;
         align-items: center;
         cursor: pointer;
+    }
+}
+
+.galeri{
+
+    &__btn{
+
+        @include min-responsive($md){
+            left: 0;
+            bottom: 25px;
+            width: auto;
+        }
+        
     }
 }

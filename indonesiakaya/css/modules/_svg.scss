@@ -14,4 +14,14 @@
         fill:none;
         stroke: $color__gray;
     }
+    
+    &__lg{
+
+        &__white{
+            
+            @include min-responsive($md){
+                stroke:#fff;
+            }
+        }
+    }
 }
