@@ -77,8 +77,13 @@
 				&.toggle {
 					width: 100%;
 					display: block;
-					background: rgba(0,0,0,0.78);
-					color: #fefefe;					
+					color: #fff;	
+					font-weight: 500;	
+					@include max-responsive($md)	{
+						&:hover{
+							color: #fff !important;	
+						}
+					}		
 				}
 				span{
 					right: 0;
