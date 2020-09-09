@@ -441,6 +441,13 @@
         height: auto;
         width: 100%;
 
+        h3{
+            @include min-responsive($md){
+                font-size: 56px;
+                line-height: 59px;
+            }
+        }
+
         small{
             @extend .color__orange;
         }
