@@ -367,6 +367,23 @@
         }
     }
 
+    &__bg{
+
+        &__1{
+            background-image: url(../images/bg_1.jpg);
+        }
+
+        
+        &__hide{
+
+            &__m{
+                @include max-responsive($md){
+                    background-image:none;
+                }
+            }
+        }
+    }
+
 
 }
 
@@ -733,6 +750,13 @@
 }
 
 .galeri{
+
+    & .bg__black{
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+    }
 
     &__btn{
 

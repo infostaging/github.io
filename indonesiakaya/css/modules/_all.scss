@@ -125,7 +125,7 @@
   &__1{
     border:1px solid !important;
     &__lg{
-      border:none;
+     
       @include min-responsive($md){
         border:1px solid !important;
       }
@@ -151,7 +151,6 @@
   &__bottom1{
     border-bottom:1px solid  !important;
     &__lg{
-      border:none  !important;
       @include min-responsive($md){
         border-bottom:1px solid  !important;
       }
@@ -165,7 +164,7 @@
   }
 
   &__none{
-
+    
     &__lg{
       @include min-responsive($md){
         border:none !important;
@@ -302,6 +301,10 @@
         background: none;
       }
     }    
+  }
+
+  &__black{
+      background-color: rgba(0,0,0,0.7);
   }
 }
 

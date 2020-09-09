@@ -330,9 +330,10 @@
     </div>  
 
     <!-- Kunjungi Kami --> 
-    <div class="section section__feed galeri section__orange pt-3 pb-5 pt-lg-0 d-lg-none">    
+    <div class="section section__feed section__bg__1 section__bg__hide__m galeri section__orange pt-3 pb-5 pt-lg-0">    
+      <div class="position__absolute bg__black"></div>
         <div class="container"> 
-          <div class="border__bottom1__lg border__gray2 px-lg-5">         
+          <div class="border__bottom1__lg border__gray3 px-lg-5">         
             <div class="col-12 d-flex align-items-center justify-content-between">
               <h2 class="pb-3 py-lg-4 col-12 p-0 col-lg">Kunjungi Kami</h2>
               <a href="#" class="btn btn__orange btn__lg btn__white d-none d-lg-block">
@@ -357,7 +358,7 @@
               <div class="section__item py-lg-5">             
                 <div id="galeri__inka__item" class="section__item__inner section__item__inner1">
                  <div class="section__feed__item section__feed__item--big section__feed__item--galeri d-flex align-items-center justify-content-between">
-                  <div class="section__img border__none__lg col-lg-7 p-0 px-lg-3">
+                  <div class="section__img col-lg-7 p-0">
                     <img src="images/img11.jpg" alt="">
                   </div>
                   <div class="section__text col-lg-5 pt-4 px-lg-3">             
@@ -368,7 +369,7 @@
                 </div>
                 <div id="taman__inka__item"  class="section__item__inner section__item__inner2">
                   <div class="section__feed__item section__feed__item--big section__feed__item--galeri d-flex align-items-center justify-content-between">
-                    <div class="section__img border__none__lg col-lg-7 p-0 px-lg-3">
+                    <div class="section__img col-lg-7 p-0">
                       <img src="images/img12.jpg" alt="">
                     </div>
                     <div class="section__text col-lg-5 pt-4 px-lg-3">             
@@ -850,10 +851,18 @@
         <div class="row d-none d-lg-block">
           <div class="d-flex flex-row-reverse align-items-center px-lg-5 border__bottom1__lg border__gray3">
             <div class="section__img section__img--big border__none__lg col-lg-8 p-lg-0 p-0">
-              <img src="images/img33.jpg" alt="">
-              <span class="bg__shadowBottom3">
-                <img src="images/svg/icon__play.svg" alt="">
-              </span>
+              <div class="itemopenVideo">
+                <img src="images/img33.jpg" alt="">
+                <span class="bg__shadowBottom3">
+                  <img src="images/svg/icon__play.svg" alt="">
+                </span>
+              </div>
+              <div class="itemVideo">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TKmGU77INaM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>       
+                <div class="itemVideo__close">
+                  <img src="images/svg/icon__menuMobileCloseBlack.svg" alt="">
+                </div>
+              </div>
             </div>
             <div class="section__text col-lg-4 px-3 py-3 mt-4">             
               <small class="mb-2">Jelajah Indonesia Kaya</small>
@@ -996,8 +1005,8 @@
           <img src="images/svg/logo.svg">
         </div>
       </div>
-      <div class="row col-lg-9 p-0 pl-lg-5">
-        <div class="col-6 col-lg-3 mb-5">
+      <div class="row col-lg-9 p-0 pl-lg-5 d-flex flex-wrap">
+        <div class="col-6 col-lg-3 mb-5 order-lg-1">
           <h5 class="border__top3 border__gray mb-3 pt-2">Indonesia Kaya</h5>
           <ul class="list">
             <li class="mb-2">
@@ -1014,7 +1023,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-2">
           <h5 class="border__top3 mb-3 pt-2">Ikuti Kami</h5>
           <ul class="list">
             <li class="mb-2">
@@ -1031,7 +1040,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-5">
           <h5 class="border__top3 border__orange2 mb-3 pt-2">Kegiatan Kami</h5>
           <ul class="list">
             <li class="mb-2">
@@ -1042,7 +1051,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-4">
           <h5 class="border__top3 border__orange mb-3 pt-2">Kunjungi Kami</h5>
           <ul class="list">
             <li class="mb-2">
@@ -1053,7 +1062,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-3">
           <h5 class="border__top3 border__blue mb-3 pt-2">Pustaka Indonesia</h5>
           <ul class="list">
             <li class="mb-2">
@@ -1070,7 +1079,7 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-6">
           <h5 class="border__top3 border__green mb-3 pt-2">Tokoh Indonesia</h5>
           <ul class="list">
             <li class="mb-2">
@@ -1081,10 +1090,10 @@
             </li>
           </ul>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-8 order-8">
           <h5 class="border__top3 border__greenpastle mb-3 pt-2">Indonesia Kaya TV</h5>
         </div>
-        <div class="col-6 col-lg-3 mb-5">
+        <div class="col-6 col-lg-3 mb-5 order-lg-7">
           <h5 class="border__top3 border__purple mb-3 pt-2">Agenda Budaya</h5>
           <ul class="list">
             <li class="mb-2">
