@@ -40,8 +40,12 @@
 	height: 100vh;
 	display: none;
 	
-	@include max-responsive($sm){
+	@include max-responsive($sm){		
 		overflow-y: scroll;
+	}
+
+	@include min-responsive($md){
+		height: auto;
 	}
 
 	& > span{
@@ -55,9 +59,8 @@
 		.inner {
 			overflow: hidden;
 			display: none;
-		
-			&.show {
-			/*display: block;*/
+			@include min-responsive($md){
+				display: block;
 			}
 		}
 	
@@ -66,19 +69,16 @@
 			a{
 				font-size: 20px;
 				width: 100%;
+
+				@include min-responsive($md){
+					font-size:18px;
+				}
 				
 				&.toggle {
 					width: 100%;
 					display: block;
 					background: rgba(0,0,0,0.78);
-					color: #fefefe;
-					transition: background .3s ease;
-				
-					&:hover {
-						background: rgba(0, 0, 0, 0.9);
-					}
-
-					
+					color: #fefefe;					
 				}
 				span{
 					right: 0;

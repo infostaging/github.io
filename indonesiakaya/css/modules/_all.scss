@@ -75,48 +75,84 @@
   }
 }
 
+//hover
+.hover{
+
+  &__blue{      
+    &:hover > a{
+      @extend .color__blue;
+    }
+  }  
+  &__orange{      
+    &:hover > a{
+      @extend .color__orange;
+    }
+  }  
+  &__orange2{      
+    &:hover > a{
+      @extend .color__orange2;
+    }
+  }  
+  &__green{      
+    &:hover > a{
+      @extend .color__green;
+    }
+  }  
+  &__purple{      
+    &:hover > a{
+      @extend .color__purple;
+    }
+  }  
+  &__greenpastle{      
+    &:hover > a{
+      @extend .color__greenpastle;
+    }
+  }  
+
+}
+
 //text color 
 .color__white{
-  color:#fff;
+  color:#fff !important;
 }
 .color__orange{
-  color:$color__orange;
+  color:$color__orange !important;
 }
 .color__orange2{
-  color:$color__orange2;
+  color:$color__orange2 !important;
 }
 .color__blue{
-  color:$color__blue;
+  color:$color__blue !important;
 }
 .color__green{
-  color:$color__green;
+  color:$color__green !important;
 }
 .color__green2{
-  color:$color__green2;
+  color:$color__green2 !important;
 }
 .color__gray{
-  color:$color__gray;
+  color:$color__gray !important;
 }
 .color__gray2{
-  color:$color__gray2;
+  color:$color__gray2 !important;
 }
 .color__gray3{
-  color:$color__gray3;
+  color:$color__gray3 !important;
 }
 .color__gray4{
-  color:$color__gray4;
+  color:$color__gray4 !important;
 }
 .color__gray5{
-  color:$color__gray5;
+  color:$color__gray5 !important;
 }
 .color__gray6{
-  color:$color__gray6;
+  color:$color__gray6 !important;
 }
 .color__purple{
-  color:$color__purple;
+  color:$color__purple !important;
 }
 .color__greenpastle{
-  color:$color__greenpastle;
+  color:$color__greenpastle !important;
 }
 
 // boder
@@ -140,6 +176,12 @@
   
   &__top1{
     border-top:1px solid  !important;
+    &__lg{
+     
+      @include min-responsive($md){
+        border-top:1px solid !important;
+      }
+    }
   }
   &__top2{
     border-top:2px solid  !important;
@@ -164,7 +206,7 @@
   }
 
   &__none{
-    
+
     &__lg{
       @include min-responsive($md){
         border:none !important;

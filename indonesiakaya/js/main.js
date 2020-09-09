@@ -42,9 +42,11 @@ $(document).ready(function(){
     window.onscroll = function() {
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
-            document.querySelector(".header").style.top = "0";
+            //document.querySelector(".header").style.top = "0";
+            $(".header").css("top","0");
         } else {
-            document.querySelector(".header").style.top = "-75px";
+            //document.querySelector(".header").style.top = "-100px";
+            $(".header").css("top","-100px");
         }
         prevScrollpos = currentScrollPos;
     }
@@ -56,22 +58,27 @@ $(document).ready(function(){
         }, 1000);
      });
 
+     function noScroll() {
+        window.scrollTo(0, 0);
+      }
+
      //menu
      $('.header__menu').on('click',function(){
         if($(this).attr('data-click-state') == 1) {
             $(this).attr('data-click-state', 0);
             $(this).children().attr('src', "images/svg/icon__menuMobileClose.svg");
-           
             $(".nav").css("display","block");
-            $("body").css("overflow","hidden");
+            $(".header").addClass("border__none__lg");
+            window.addEventListener('scroll', noScroll);
             console.log("0");
           }
         else {
             $(this).attr('data-click-state', 1);
             $(this).children().attr('src', "images/svg/icon__menuMobile.svg");
-           
+            $(".header").removeClass("border__none__lg");
+            window.removeEventListener('scroll', noScroll);
             $(".nav").css("display","none");
-            $("body").css("overflow-y","scroll");
+
             console.log("1");
         } 
       });
@@ -96,9 +103,6 @@ $(document).ready(function(){
 
     $(".itemopenVideo").click(function() {
         $(this).parent().children('.itemVideo').addClass('show');
-        // var hWrapVideo = $(this).children('img').height();
-        // $(this).parent().children('.itemVideo').height(hWrapVideo);
-        // console.log(hWrapVideo);
     });
     $(".itemVideo__close").click(function() {
         $(this).removeClass('show');
