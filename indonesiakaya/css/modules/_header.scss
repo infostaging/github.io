@@ -34,6 +34,35 @@
 			display: none;
 		}
 	}
+
+	&__bar{
+		position: absolute;
+		width: 100%;
+		bottom: -41px;
+
+		ul{
+
+			li{
+				
+				a{
+
+				}
+
+				ul{
+					//display: none;
+					li{
+
+					}
+				}
+			}
+
+		}
+
+		ul > li{
+				width: 200px;
+		
+		}
+	}
 }
 
 .nav{
@@ -103,3 +132,4 @@
 		}
 	}
 }
+
