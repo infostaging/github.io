@@ -19,6 +19,13 @@
 	}
 	&__logo{
 		text-align: center;
+
+		img{
+			
+			@include min-responsive($md){
+				width: 200px;
+			}
+		}
 	}
 
 	&__menu{
@@ -28,6 +35,53 @@
 
 	&__search{
 		text-align: right;
+		cursor: pointer;
+
+		&__open{
+			display: none;
+			background: #000;
+
+			h3{
+				
+				@include min-responsive($md){
+					font-size: 36px;
+					line-height: 46px;	
+					font-weight: normal;
+				}
+			}
+
+			input{
+				border-radius: 0;
+				background: none;
+				border-bottom: 1px solid #fff;
+				border-top: none;
+				border-right: none;
+				border-left: none;
+				color: #fff;
+				font-weight: 500;
+				font-size: 20px;
+				line-height: 0;
+				@include min-responsive($md){
+					font-size: 28px;
+					line-height: 36px;
+				}
+			}
+
+			button{
+				right: 0;
+				bottom: 0;
+				background: none;
+
+				img{
+					width: 20px;
+					
+					@include min-responsive($md){
+						width: 35px;
+					}
+				}
+			}
+			
+		}
 	}
 	&__home{
 		@include max-responsive($sm){
@@ -38,29 +92,64 @@
 	&__bar{
 		position: absolute;
 		width: 100%;
-		bottom: -41px;
+		bottom: -54px;
+		border-bottom:1px solid #000;
 
 		ul{
 
 			li{
+				position: relative;
 				
 				a{
-
+					font-size: 18px;
+					font-weight: 500;
+					color: $color__gray6;
+					display: flex;
+					align-items: center;
+					justify-items: center;
 				}
 
 				ul{
-					//display: none;
-					li{
+					display: none;
+					position: absolute;
+					width: 500px;
+					left: 0;
+					right: 0;
+					bottom:-50px;
+					min-width: 500px;
+					text-align: left;				
 
+					li{
+						width: auto;
+					}
+				}
+
+				&:hover{
+					a{
+						color: #fff;
+					}
+				}
+				&.show{					
+					ul{
+						display: block;
+					}
+					a{
+						img{
+							display: none;
+						}
 					}
 				}
 			}
-
 		}
 
-		ul > li{
-				width: 200px;
-		
+		&__subbar{
+			left: 0;
+			z-index: -1;
+			
+			display: none;
+			&.show{
+				display: block;
+			}
 		}
 	}
 }
@@ -68,6 +157,7 @@
 .nav{
 	height: 100vh;
 	display: none;
+	background: #000;
 	
 	@include max-responsive($sm){		
 		overflow-y: scroll;

@@ -31,11 +31,11 @@ $xxs:320px;
 }
 
 @mixin base_transition($t) {
-    -webkit-transition: $t 0.2s ease;
-    -moz-transition: $t 0.2s ease;
-    -ms-transition: $t 0.2s ease;
-    -o-transition: $t 0.2s ease;
-    transition: $t 0.2s ease;
+    -webkit-transition: $t 0.3s ease;
+    -moz-transition: $t 0.3s ease;
+    -ms-transition: $t 0.3s ease;
+    -o-transition: $t 0.3s ease;
+    transition: $t 0.3s ease;
 }
 
 //fonts

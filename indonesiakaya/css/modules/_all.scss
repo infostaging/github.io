@@ -220,7 +220,7 @@
   }
 
   &__none{
-
+    border:none !important;
     &__lg{
       @include min-responsive($md){
         border:none !important;
@@ -372,6 +372,13 @@
 
   &__black{
       background-color: rgba(0,0,0,0.7);
+  }
+  &__black2{
+      background:#000;
+  }
+
+  &__gray{
+    background: #141414;
   }
 }
 
