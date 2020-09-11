@@ -94,6 +94,13 @@
 		width: 100%;
 		bottom: -54px;
 		border-bottom:1px solid #000;
+		display: none !important;
+
+		&.open{
+			@include min-responsive($md){
+				display: block !important;
+			}
+		}
 
 		ul{
 

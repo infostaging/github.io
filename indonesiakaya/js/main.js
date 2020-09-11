@@ -47,6 +47,10 @@ $(document).ready(function(){
 
     //header scroll
     var prevScrollpos = window.pageYOffset;
+    var getHeight = $(window).height();
+
+   
+
     function scrollHeader(){
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
@@ -54,7 +58,13 @@ $(document).ready(function(){
         } else {
             $(".header").css("top","-150px");
         }
+        if (currentScrollPos >= getHeight){
+            $(".header__bar").addClass("open");
+        }else{
+            $(".header__bar").removeClass("open");
+        }
         prevScrollpos = currentScrollPos;
+        console.log(getHeight, prevScrollpos);
     }    
     window.addEventListener("scroll", scrollHeader); 
 
