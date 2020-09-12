@@ -9,6 +9,7 @@
 
 .section{
     position: relative;
+    overflow: hidden;
 
     h2,h4{
         //border-bottom: 1px solid $color__gray;
@@ -512,6 +513,10 @@
         height: 100%;
         overflow: hidden;
 
+        @include min-responsive($md){
+            overflow: inherit;
+        }
+
         img{
             filter: grayscale(100%);
         }
@@ -557,7 +562,7 @@
         &__shadow{
             bottom: 0;
             left: 0;
-            height: 170px;
+            height: 145px;
         }
         &__Topshadow{
             top: 0;
@@ -669,10 +674,23 @@
             bottom: 25px;
         }
     }
-    & .slick-arrow{
-        top: 29%;
+    &__arrow{
+        top:175px;
+        position: absolute;
         @include min-responsive($md){
-            display: none !important;
+            top:45%;
+        }
+    }
+    & .next-arrow {
+        
+        @include min-responsive($md){
+            right: 40px;
+        }
+    }
+    & .prev-arrow {
+        
+        @include min-responsive($md){
+            left: 40px;
         }
     }
     & .slick-initialized .slick-slide {
@@ -695,7 +713,7 @@
 
         @include min-responsive($md){
             right: 0;
-            top: 10px;
+            top: 16px;
         }
     }
     h3{
@@ -806,6 +824,7 @@
             bottom: auto;
             @include min-responsive($md){
                 top: 510px;
+                display: none !important;
             }
         }
         & .section__text{
@@ -817,11 +836,28 @@
     }
 
     &__card{
+
+        @include min-responsive($md){
+            height: 400px;
+        }
+
+        @include range-responsive($sm, 990px){
+            height: 300px;
+        }
+
         
+
+
+        &--one{                
+            @include min-responsive($md){
+                height: auto;
+            }
+        }
+
         & .section__img{
             height: 100px;
             @include min-responsive($md){
-                height: 180px;
+                height: 100%;
             }
 
             &--big{
@@ -831,6 +867,7 @@
                     height: 250px;
                 }
             }
+
         }
 
         & .section__text{
@@ -839,19 +876,19 @@
             height: 100%;
 
             h3{
-                font-size: 20px;
+                font-size: 18px;
                 line-height: 20px;
 
                 @include min-responsive($md){
-                    font-size: 32px;
-                    line-height: 34px;
+                    font-size: 30px;
+                    line-height: 30px;
                 }
             }
         }
         & .btn{
-            bottom: 12px;
+            bottom: 10px;
             @include min-responsive($md){
-                bottom: 35px;
+                bottom: auto;
             }
         }
 
@@ -865,9 +902,6 @@
                         object-position: 50% 50%;
                         object-fit: contain;
                     }
-                }
-                & .bg__shadowleft{
-                    background: none;
                 }
             }
         }

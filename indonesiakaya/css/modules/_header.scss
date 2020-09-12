@@ -40,6 +40,14 @@
 		&__open{
 			display: none;
 			background: #000;
+			height: 100vh;
+			top:0;
+			z-index: -1;
+			@include min-responsive($md){
+				height: auto;			
+				top: auto;
+				z-index: 0;
+			}
 
 			h3{
 				

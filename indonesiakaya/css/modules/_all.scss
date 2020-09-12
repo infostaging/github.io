@@ -16,6 +16,9 @@
   &__left2 > img{
     object-position: 40% 50%;
   }
+  &__left3 > img{
+    object-position: 60% 50%;
+  }
 }
 
 .imgAuto > img{
@@ -40,8 +43,11 @@
     z-index: 9999;
   }
   &__small{
-    padding: 10px 20px;
-    font-size: 10px;
+    padding:3px 20px;
+    font-size: 10px !important;
+    @include min-responsive($md){
+      font-size: 14px !important;
+    }
   }
 
   img{
@@ -90,36 +96,73 @@
 }
 
 //hover
-.hover{
+.hover,
+.color{
 
   &__blue{      
     &:hover > a{
       @extend .color__blue;
+    }
+    ul{
+      li{
+        &:hover > a{
+          @extend .color__blue;
+        }
+      }
     }
   }  
   &__orange{      
     &:hover > a{
       @extend .color__orange;
     }
+    ul{
+      li{
+        &:hover > a{
+          @extend .color__orange;
+        }
+      }
+    }
   }  
   &__orange2{      
     &:hover > a{
       @extend .color__orange2;
+    }
+    ul{
+      li{
+        &:hover > a{
+          @extend .color__orange2;
+        }
+      }
     }
   }  
   &__green{      
     &:hover > a{
       @extend .color__green;
     }
-  }  
+    li{
+      &:hover > a{
+        @extend .color__green;
+      }
+    }
+  }
   &__purple{      
     &:hover > a{
       @extend .color__purple;
     }
-  }  
+    li{
+      &:hover > a{
+        @extend .color__purple;
+      }
+    }
+  }
   &__greenpastle{      
     &:hover > a{
       @extend .color__greenpastle;
+    }
+    li{
+      &:hover > a{
+        @extend .color__greenpastle;
+      }
     }
   }  
 
@@ -298,16 +341,26 @@
       }
     }
   }
-
   &__fixed{
     position: fixed;
   }
-
   &__relative{
     position: relative;
   }
-  
+  &__l{
+    left:0;
+  }
+  &__r{
+    right:0;
+  }
+  &__t{
+    top:0;
+  }
+  &__b{
+    bottom: 0;
+  }
 }
+
 
 .text{
 
@@ -477,4 +530,98 @@
 }
 .z999{
   z-index: 999;
+}
+
+//ulir
+.ulir{
+  width: 100px !important;
+  filter: none !important;
+  //z-index: 99;
+
+  @include min-responsive($md){
+      width: 200px !important;
+  }
+  &__hAuto{
+      height: auto !important;
+  }
+
+  &__small{
+      width: 75px!important; 
+  }
+  &__big{
+      width: 120px !important; 
+  }
+  &__super{
+      width: 230px !important; 
+  }
+
+  &__r{
+      right: -50px;
+      @include min-responsive($md){
+          right: -40px;
+      }
+      
+      &__2{
+          right: -15px;
+      }
+      &__3{
+          right: -30px;
+      }
+  }
+  &__l{
+      left: -50px;
+
+      @include min-responsive($md){
+          left: -40px;
+      }
+      
+      &__2{
+          left:-15px;
+      }
+      &__3{
+          left:-30px;
+      }
+      &__4{
+          left: -115px;
+      }
+      &__5{
+          left: -70px;
+      }
+      &__6{
+          left: -50px;
+      }
+  }
+  &__t{
+
+      &__1{
+          top: 50px;
+      }
+      &__2{
+          top: 250px;
+      }
+  }
+  &__b{
+      bottom: 20px;
+
+      &__2{
+          bottom: 50px;
+      }
+      &__3{
+          bottom: -150px;
+      }
+  }
+  &__opacity3{
+      opacity: 0.3;
+  }
+  &__opacity4{
+      opacity: 0.4;
+  }
+  &__z{
+      &__1{
+          z-index: 0;
+      }
+      &__min1{
+        z-index: -1;
+      }
+  }   
 }

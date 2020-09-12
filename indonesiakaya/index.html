@@ -35,7 +35,9 @@
           </div>
         </div>
         <div class="col-8 header__logo">
-          <img src="images/svg/logo.svg">
+          <h1 class="d-flex align-items-center justify-content-center"> 
+            <img src="images/svg/logo.svg">
+          </h1>
         </div>
         <div class="col-2 header__search"  data-click-state="1">
           <img src="images/svg/icon__search.svg">
@@ -301,7 +303,7 @@
       <span class="position__fixed col-12 p-0 bg__shadowBottom2 py-5 d-lg-none"></span>
     </nav>
 
-    <div class="header__search__open col-12 p-0 px-lg-5 py-5 pb-lg-0 pt-lg-3 mt-lg-3 position__absolute border__top1__lg border__gray">
+    <div class="header__search__open align-items-center col-12 py-0 p-0 px-lg-5 py-5 pb-lg-0 pt-lg-3 mt-lg-3 position__absolute border__top1__lg border__gray">
       <div class="container px-lg-5">
         <div class="row px-lg-5">
           <div class="col-12 p-lg-5">          
@@ -390,14 +392,17 @@
 
     <!-- Kegiatan --> 
     <div class="section section__feed kegiatan section__orange2 pt-3 pb-lg-5 pt-lg-0">    
-      <div class="container">  
+      
+      <div class="container position__relative">  
+        <img class="ulir ulir__l__4 ulir__b ulir__opacity4 position__absolute position__l position__b mx-auto d-none d-lg-block" src="images/svg/ulir__dayak2.svg" alt="">   
         <div class="border__bottom1__lg border__gray border__none__lg px-lg-5">         
           <div class="col-12 d-flex align-items-center justify-content-between">
             <h2 class="pb-3 mb-lg-0 py-lg-5 col-12 p-0 col-lg border__bottom1 border__gray border__none__lg">Kegiatan Kami</h2>
           </div>
         </div>
 
-        <div class="row border__bottom1 border__gray px-lg-5">            
+        <div class="row border__bottom1 border__gray px-lg-5 position__relative">       
+          <img class="ulir ulir__r ulir__b ulir__opacity4 position__absolute position__r position__b mx-auto d-none d-lg-block" src="images/svg/ulir__dayak2.svg" alt="">     
           <div class="col-12 p-0 px-lg-3 mb-lg-0">
             <div class="kegiatan__slider">
               <div class="col-12 p-0 d-lg-flex align-items-center">
@@ -407,7 +412,7 @@
                 </div>
                 <div class="section__text col-12 col-lg-4 p-lg-3 ml-lg-5">             
                   <small class="mb-2  mb-lg-4 mt-3">Terbaru</small>
-                  <h3 class="font__big">Indonesia Menari 2020</h3>
+                  <h3 class="font__big ">Indonesia Menari 2020</h3>
                   <p class="mt-2 mb-0">Jadi bagian dari festival menari terbesar di Indonesia. Pendaftaran telah di buka.</p>
                   <div class="d-flex mt-lg-5">
                     <a href="#" class="btn btn__orange2 btn__lg d-none d-lg-block">
@@ -445,15 +450,17 @@
                 <svg  class="svg svg__arrow">
                   <use xlink:href="#arrow__btn" />
                 </svg>
-              </a>
+              </a> 
+              <img class="ulir ulir__r position__absolute position__r position__t position__b mx-auto ulir__opacity3" src="images/svg/ulir__dayak2.svg" alt="">
+              <img class="ulir ulir__l position__absolute position__l position__t position__b mx-auto ulir__opacity3" src="images/svg/ulir__dayak2.svg" alt="">
             </div>       
           </div>
         </div>
 
-        <div class="row px-lg-5">         
-          <div class="border__bottom1 border__gray border__none__lg pb-5 pb-lg-0">
+        <div class="px-lg-5 row d-flex flex-lg-column-reverse  ">
+          <div class="row">       
             <div class="col-12 mb-2  d-flex align-items-center justify-content-between">
-              <h4 class="py-3 p-0 mb-3 mb-lg-0 py-lg-5 col-lg border__bottom1 border__gray2 border__none__lg">Indonesia Menari</h4>
+              <h4 class="py-3 p-0 mb-3 mb-lg-0 py-lg-5 col-lg border__bottom1 border__gray2 border__none__lg">Ruang Kreatif</h4>
               <a href="#" class="btn btn__orange2 mx-auto d-none d-lg-block">
                 Pergi ke Laman Spesial
                 <svg  class="svg svg__arrow">
@@ -461,92 +468,103 @@
                 </svg>
               </a>
             </div>
-            <div class="col-12 kegiatan__card">
-              <div class="section__img section__img--big position__relative imgfill__left">
-                <img src="images/img34.jpg" alt="">
-                <div class="section__text position__absolute col-12 p-3 px-lg-5 py-lg-4 bg__shadowleft">
-                  <h3 class="font__big">Indonesia Menari <br>2019</h3>
-                  <span class="btn btn__small d-lg-none position__absolute">
-                    Laman Spesial
-                    <svg  class="svg svg__arrow">
-                      <use xlink:href="#arrow__btn" />
-                    </svg>
-                  </span>
-                </div>              
-              </div>            
-            </div>
-          </div>
-        </div>  
+  
+            <div class="col-12 row border__bottom1 border__gray border__none__lg pb-3 px-0">
+              <div class="col-12 col-lg-3 kegiatan__card kegiatan__card--red mb-4">
+                <div class="section__img position__relative imgfill__left">
+                  <img class="d-lg-none" src="images/img38.jpg" alt="">
+                  <img class="d-lg-block d-none" src="images/img38b.jpg" alt="">
+                  <div class="section__text position__absolute col-12 p-3 p-lg-2 px-lg-4 py-lg-4 bg__shadowleft">
+                    <h3 class="mb-lg-3">Indonesia Menuju  <br>Broadway</h3>
+                    <span class="btn btn__small position__absolute">
+                      Laman Spesial
+                      <svg  class="svg svg__arrow">
+                        <use xlink:href="#arrow__btn" />
+                      </svg>
+                    </span>
+                  </div>              
+                </div>            
+              </div>
+              <div class="col-12 col-lg-3 kegiatan__card mb-4 mb-lg-5">
+                <div class="section__img position__relative imgfill__left">
+                  <img class="d-lg-none" src="images/img35.jpg" alt="">
+                  <img class="d-lg-block d-none" src="images/img35b.jpg" alt="">
+                  <div class="section__text position__absolute col-12 p-3 p-lg-2 px-lg-4 py-lg-4 bg__shadowleft">
+                    <h3 class="mb-lg-3">Seni Pertunjukan  <br>Indonesia</h3>
+                    <span class="btn btn__small position__absolute circle circle__2">
+                      <img class="m-0" src="images/svg/icon__arrowSingle.svg" alt="">
+                    </span>
+                  </div>              
+                </div>            
+              </div>
+              <div class="col-12 col-lg-3 kegiatan__card mb-4 mb-lg-5">
+                <div class="section__img position__relative imgfill__left">
+                  <img class="d-lg-none" src="images/img36.jpg" alt="">
+                  <img class="d-lg-block d-none" src="images/img36b.jpg" alt="">
+                  <div class="section__text position__absolute col-12 p-3 p-lg-2 px-lg-4 py-lg-4 bg__shadowleft">
+                    <h3 class="mb-lg-3">Seni Tari<br>Dearah</h3>
+                    <span class="btn btn__small position__absolute circle circle__2">
+                      <img class="m-0" src="images/svg/icon__arrowSingle.svg" alt="">
+                    </span>
+                  </div>              
+                </div>            
+              </div>
+              <div class="col-12 col-lg-3 kegiatan__card mb-4">
+                <div class="section__img position__relative imgfill__left">
+                  <img class="d-lg-none" src="images/img37.jpg" alt="">
+                  <img class="d-lg-block d-none" src="images/img37b.jpg" alt="">
+                  <div class="section__text position__absolute col-12 p-3 p-lg-2 px-lg-4 py-lg-4 bg__shadowleft">
+                    <h3 class="mb-lg-3">Seminar & Workshop</h3>
+                    <span class="btn btn__small position__absolute circle circle__2">
+                      <img class="m-0" src="images/svg/icon__arrowSingle.svg" alt="">
+                    </span>
+                  </div>              
+                </div>            
+              </div>
 
-        <div class="row px-lg-5">       
-          <div class="col-12 mb-2  d-flex align-items-center justify-content-between">
-            <h4 class="py-3 p-0 mb-3 mb-lg-0 py-lg-5 col-lg border__bottom1 border__gray2 border__none__lg">Ruang Kreatif</h4>
-            <a href="#" class="btn btn__orange2 mx-auto d-none d-lg-block">
-              Pergi ke Laman Spesial
-              <svg  class="svg svg__arrow">
-                <use xlink:href="#arrow__btn" />
-              </svg>
-            </a>
-          </div>
+            </div>
+          </div>  
+          
+          <div class="row">         
+            <div class="border__bottom1 border__gray border__none__lg pb-5 pb-lg-0">
+              <div class="col-12 mb-2  d-flex align-items-center justify-content-between">
+                <h4 class="py-3 p-0 mb-3 mb-lg-0 py-lg-5 col-lg border__bottom1 border__gray2 border__none__lg">Indonesia Menari</h4>
+                <a href="#" class="btn btn__orange2 mx-auto d-none d-lg-block">
+                  Pergi ke Laman Spesial
+                  <svg  class="svg svg__arrow">
+                    <use xlink:href="#arrow__btn" />
+                  </svg>
+                </a>
+              </div>
+              <div class="col-12 kegiatan__card kegiatan__card--one">
+                <div class="section__img section__img--big  position__relative imgfill__left">
+                  <img src="images/img34.jpg" alt="">
+                  <div class="section__text position__absolute col-12 p-3 px-lg-5 py-lg-4 bg__shadowleft">
+                    <h3 class="font__big col-lg-4 col-4 p-0">Indonesia Menari 2019</h3>
+                    <span class="btn btn__small d-lg-none position__absolute">
+                      Laman Spesial
+                      <svg  class="svg svg__arrow">
+                        <use xlink:href="#arrow__btn" />
+                      </svg>
+                    </span>
+                  </div>              
+                </div>            
+              </div>
+            </div>
+          </div>  
+  
+         
+        </div>
 
-          <div class="col-12 row border__bottom1 border__gray border__none__lg pb-5 px-0">
-            <div class="col-12 col-lg-6 kegiatan__card mb-4 mb-lg-5">
-              <div class="section__img position__relative imgfill__left">
-                <img src="images/img35.jpg" alt="">
-                <div class="section__text position__absolute col-12 p-3 px-lg-5 py-lg-4 bg__shadowleft">
-                  <h3>Seni Pertunjukan  <br>Indonesia</h3>
-                  <span class="btn btn__small position__absolute circle circle__2">
-                    <img class="m-0" src="images/svg/icon__arrowSingle.svg" alt="">
-                  </span>
-                </div>              
-              </div>            
-            </div>
-            <div class="col-12 col-lg-6 kegiatan__card mb-4 mb-lg-5">
-              <div class="section__img position__relative imgfill__left">
-                <img src="images/img36.jpg" alt="">
-                <div class="section__text position__absolute col-12 p-3 px-lg-5 py-lg-4 bg__shadowleft">
-                  <h3>Seni Tari<br>Dearah</h3>
-                  <span class="btn btn__small position__absolute circle circle__2">
-                    <img class="m-0" src="images/svg/icon__arrowSingle.svg" alt="">
-                  </span>
-                </div>              
-              </div>            
-            </div>
-            <div class="col-12 col-lg-6 d-lg-none kegiatan__card mb-4">
-              <div class="section__img position__relative imgfill__left">
-                <img src="images/img37.jpg" alt="">
-                <div class="section__text position__absolute col-12 p-3 bg__shadowleft">
-                  <h3>Seminar</h3>
-                  <span class="btn btn__small d-lg-none position__absolute circle circle__2">
-                    <img class="m-0" src="images/svg/icon__arrowSingle.svg" alt="">
-                  </span>
-                </div>              
-              </div>            
-            </div>
-            <div class="col-12 kegiatan__card kegiatan__card--red">
-              <div class="section__img section__img--big position__relative imgfill__left2">
-                <img src="images/img38.jpg" alt="">
-                <div class="section__text position__absolute col-12 p-3 px-lg-5 py-lg-4 bg__shadowleft">
-                  <h3>Indonesia Menuju  <br>Broadway</h3>
-                  <span class="btn btn__small d-lg-none position__absolute">
-                    Laman Spesial
-                    <svg  class="svg svg__arrow">
-                      <use xlink:href="#arrow__btn" />
-                    </svg>
-                  </span>
-                </div>              
-              </div>            
-            </div>
-          </div>
-        </div>  
  
       </div>
     </div>  
 
     <!-- Kunjungi Kami --> 
     <div class="section section__feed section__bg__1 section__bg__hide__m galeri section__orange pt-3 pb-5 pt-lg-0">    
-      <div class="position__absolute bg__black"></div>
-        <div class="container"> 
+      <div class="position__absolute bg__black"></div>     
+        <div class="container position__relative"> 
+          <img class="ulir__big ulir__hAuto ulir__l__2 ulir__b__3 ulir__opacity4 position__absolute position__l position__b mx-auto d-none d-lg-block" src="images/svg/ulir__dayak3.svg" alt="">  
           <div class="border__bottom1__lg border__gray3 px-lg-5">         
             <div class="col-12 d-flex align-items-center justify-content-between">
               <h2 class="pb-3 py-lg-5 col-12 p-0 col-lg">Kunjungi Kami</h2>
@@ -570,10 +588,11 @@
                 </a>
               </div>
               <div class="section__item py-lg-5">             
-                <div id="galeri__inka__item" class="section__item__inner section__item__inner1">
+                <div id="galeri__inka__item" class="section__item__inner section__item__inner1">                  
                  <div class="section__feed__item section__feed__item--big section__feed__item--galeri d-flex align-items-center justify-content-between">
                   <div class="section__img col-lg-6 offset-lg-2 p-0">
-                    <img src="images/img11.jpg" alt="">
+                    <img class="ulir__big ulir__hAuto ulir__l__5 ulir__b ulir__opacity4 position__absolute position__l position__b mx-auto d-none d-lg-block" src="images/svg/ulir__dayak3.svg" alt="">   
+                    <img class="position__relative" src="images/img11.jpg" alt="">
                   </div>
                   <div class="section__text col-lg-4 pt-4 pr-lg-4">             
                     <h3 class="font__big mb-lg-3 pr-lg-3">Galeri Indonesia Kaya</h3>
@@ -584,7 +603,7 @@
                 <div id="taman__inka__item"  class="section__item__inner section__item__inner2">
                   <div class="section__feed__item section__feed__item--big section__feed__item--galeri d-flex align-items-center justify-content-between">
                     <div class="section__img col-lg-6 offset-lg-2 p-0">
-                      <img src="images/img12.jpg" alt="">
+                      <img class="position__relative" src="images/img12.jpg" alt="">
                     </div>
                     <div class="section__text col-lg-4 pt-4 pr-lg-4">             
                       <h3 class="font__big mb-lg-3 pr-lg-3">Taman Indonesia Kaya</h3>
@@ -596,22 +615,23 @@
             </div>
           </div>     
           <div class="row d-lg-none">
-            <div class="col-12 d-flex">
+            <div class="col-12 d-flex position__relative">
               <a href="#" class="btn btn__orange mx-auto">
                 Lihat Selengkapnya
                 <svg  class="svg svg__arrow">
                   <use xlink:href="#arrow__btn" />
                 </svg>
               </a>
+              <img class="ulir__small ulir__opacity3 position__absolute ulir__r__2 position__t position__b mx-auto" src="images/svg/ulir__dayak3.svg" alt="">
+              <img class="ulir__small ulir__opacity3 position__absolute ulir__l__2 position__t position__b mx-auto" src="images/svg/ulir__dayak3.svg" alt="">
             </div>
           </div>   
         </div>
     </div>  
 
     <!-- Pusaka Indonesia --> 
-    <div class="section section--bgWhite section__feed section__blue pt-3 pb-5 pt-lg-0">    
+    <div class="section section--bgWhite section__feed section__blue pt-3 pb-5 pt-lg-0"> 
       <div class="container"> 
-
         <div class="border__bottom1__lg border__gray3 px-lg-5">         
           <div class="col-12 d-flex align-items-center justify-content-between">
             <h2 class="pb-3 mb-4 mb-lg-0 py-lg-5 col-12 p-0 col-lg border__bottom1 border__gray3 border__none__lg">Pustaka Indonesia</h2>
@@ -622,12 +642,14 @@
               </svg>
             </a>
           </div>
-        </div>
-        
+        </div>        
         <div class="row">            
           <div class="col-12 section__feed__item section__feed__item--big d-flex flex-row-reverse px-lg-5 border__bottom1__lg border__gray3 mb-4 mb-lg-0">
+            <img class="ulir ulir__b ulir__l position__absolute position__l position__b  m-auto ulir__hAuto d-none d-lg-block" src="images/svg/ulir__dayak4b.svg" alt="">
+            <img class="ulir ulir__b ulir__r__3 position__absolute position__r position__b  m-auto ulir__hAuto d-none d-lg-block" src="images/svg/ulir__dayak4b.svg" alt="">
             <div class="section__img border__none__lg col-lg-8 p-0 px-lg-3">
-              <img src="images/img1.jpg" alt="">
+              <img class="ulir ulir__l__6 position__absolute position__l position__t  m-auto ulir__hAuto d-none d-lg-block" src="images/svg/ulir__dayak4b.svg" alt="">
+              <img class="position__relative" src="images/img1.jpg" alt="">
             </div>
             <div class="section__text col-lg-4 p-0 px-lg-3 pt-lg-5">             
               <small class="mb-2 mb-lg-3 mt-3">Pariwisata</small>
@@ -694,6 +716,8 @@
                 <use xlink:href="#arrow__btn" />
               </svg>
             </a>
+            <img class="ulir__big ulir__r position__absolute position__r position__t position__b m-auto" src="images/svg/ulir__dayak4.svg" alt="">
+            <img class="ulir__big ulir__l position__absolute position__l position__t position__b m-auto" src="images/svg/ulir__dayak4.svg" alt="">
           </div>
         </div>   
       </div>
@@ -732,16 +756,18 @@
               </div>
             </div>
             
-            <div class="tokoh__big position__relative row pl-lg-5 pr-lg-0">              
-                <div class="section__img col-lg-8 p-lg-0 p-0">
-                  <img src="images/img13.jpg" alt="">
+            <div class="tokoh__big position__relative row pl-lg-5 pr-lg-0">     
+                <div class="section__img col-lg-8 p-lg-0 p-0 offset-lg-1">
+                  <img class="ulir ulir__hAuto ulir__l__4 ulir__opacity4 position__absolute position__l ulir__t__2  ulir__z__1 position__t mx-auto d-none d-lg-block" src="images/svg/ulir__dayak5.svg" alt="">  
+                  <img class="position__relative" src="images/img13.jpg" alt="">
                   <div class="tokoh__big__Topshadow position__absolute col-12 p-0 bg__shadowTop d-block d-lg-none"></div>       
                 </div>
-                <div class="section__text d-lg-flex align-items-center col-lg-4  bg__shadowBottom2 py-5 px-3 pr-lg-5">   
+                <div class="section__text d-lg-flex align-items-center col-lg-3  bg__shadowBottom2 py-5 px-3 pr-lg-5">   
+                  <img class="ulir__super ulir__hAuto ulir__l ulir__opacity4 position__absolute position__l position__b mx-auto d-none d-lg-block" src="images/svg/ulir__dayak5.svg" alt="">  
                   <a href="#">          
                     <h3 class="font__big">Leila Chudori</h3>
                     <small class="mt-1 mb-4 my-lg-3">Jurnalis, smallenulis</small>
-                    <p class="d-none d-lg-block mt-3">Satu persatu peserta dari masing-masing provins di Indonesia menunjukan atraksi kebudayaannyadi halaman plaza Tugu Api Taman Mini Indonesia Indah</p>
+                    <p class="d-none d-lg-block mt-3 mb-lg-5">Satu persatu peserta dari masing-masing provins di Indonesia menunjukan atraksi kebudayaannyadi halaman plaza Tugu Api Taman Mini Indonesia Indah</p>
                  </a>
                 </div>     
                 <div class="tokoh__big__shadow position__absolute col-12 p-0 d-none d-lg-block bg__shadowBottom"></div>        
@@ -856,13 +882,15 @@
             </div>
           </div>  
           <div class="row d-block d-lg-none">
-            <div class="mx-auto d-flex">
+            <div class="mx-auto d-flex position__relative">
               <a href="#" class="btn btn__green mx-auto">
                 Lihat Selengkapnya
                 <svg  class="svg svg__arrow svg__arrowGray">
                   <use xlink:href="#arrow__btn" />
                 </svg>
               </a>
+              <img class="ulir ulir__r__3 position__absolute position__r position__t position__b m-auto" src="images/svg/ulir__dayak5.svg" alt="">
+              <img class="ulir ulir__l__3 position__absolute position__l position__t position__b m-auto" src="images/svg/ulir__dayak5.svg" alt="">
             </div>
           </div> 
         </div>
@@ -886,15 +914,16 @@
             </div>
           </div>
         </div>
-        <div class="row agenda pl-lg-5 pr-lg-0">         
-          
+        <div class="row agenda pl-lg-5 pr-lg-0 position__relative">      
+          <img class="ulir__big ulir__l__6 position__absolute position__l position__b m-auto" src="images/svg/ulir__dayak6.svg" alt="">   
           <div class="col-12 p-0">
             <div class="agenda__slider">
-              <div class="row flex-row-reverse align-items-center">
+              <div class="row flex-row-reverse align-items-center">               
                 <div class="section__img border__none__lg py-4 col-lg-8">
-                  <img src="images/img26.jpg" alt="">
+                  <img src="images/img26.jpg" alt="">                   
                 </div>
-                <div class="section__text col-lg-4 px-3 py-3 mt-4">             
+                <div class="section__text col-lg-4 px-3 py-3 mt-4 position__relative">          
+                  <img class="ulir__big ulir__r ulir__z__min1 position__absolute position__r position__t position__b m-auto" src="images/svg/ulir__dayak6.svg" alt="">   
                   <small class="mb-2">Teater</small>
                   <h3>The Indonesian Opera Drayang “KEKAYI”</h3>
                   <ul>
@@ -921,7 +950,8 @@
                 <div class="section__img border__none__lg py-4 col-lg-8">
                   <img src="images/img27.jpg" alt="">
                 </div>
-                <div class="section__text col-lg-4 px-3 py-3 mt-4">             
+                <div class="section__text col-lg-4 px-3 py-3 mt-4">    
+                  <img class="ulir__big ulir__r ulir__z__min1 position__absolute position__r position__t position__b m-auto" src="images/svg/ulir__dayak6.svg" alt="">            
                   <small class="mb-2">Teater</small>
                   <h3>The Indonesian Opera Drayang “KEKAYI”</h3>
                   <ul>
@@ -948,7 +978,8 @@
                 <div class="section__img border__none__lg py-4 col-lg-8">
                   <img src="images/img28.jpg" alt="">
                 </div>
-                <div class="section__text col-lg-4 px-3 py-3 mt-4">             
+                <div class="section__text col-lg-4 px-3 py-3 mt-4">     
+                  <img class="ulir__big ulir__r ulir__z__min1 position__absolute position__r position__t position__b m-auto" src="images/svg/ulir__dayak6.svg" alt="">           
                   <small class="mb-2">Teater</small>
                   <h3>The Indonesian Opera Drayang “KEKAYI”</h3>
                   <ul>
@@ -972,16 +1003,18 @@
                 </div>
               </div>
             </div>
-              <div class="d-flex pb-5 mt-2 mx-auto mx-lg-0 col-12 position__absolute__lg">
-                <a href="#" class="btn btn__purple mx-auto position__absolute__lg">
-                  Lihat Selengkapnya
-                  <svg  class="svg svg__arrow svg__arrowGray">
-                    <use xlink:href="#arrow__btn" />
-                  </svg>
-                </a>
-              </div>        
+            <div class="agenda__arrow position__absolute col-12 col-lg-8 offset-lg-4"></div>
+            <div class="d-flex mb-5 py-3 mt-2 mx-auto mx-lg-0 col-12 position__absolute__lg position__relative">
+              <a href="#" class="btn btn__purple mx-auto position__absolute__lg">
+                Lihat Selengkapnya
+                <svg  class="svg svg__arrow svg__arrowGray">
+                  <use xlink:href="#arrow__btn" />
+                </svg>
+              </a>
+              <img class="ulir__small ulir__r__3 position__absolute position__r position__t position__b m-auto d-lg-none" src="images/svg/ulir__dayak6.svg" alt="">
+              <img class="ulir__small ulir__l__3 position__absolute position__l position__t position__b m-auto d-lg-none" src="images/svg/ulir__dayak6.svg" alt="">
+            </div>        
           </div>
-
         </div>    
         <div class="row px-lg-5">         
           <div class="col-12">
@@ -1033,15 +1066,18 @@
 
         </div>  
         <div class="row d-lg-none">
-          <div class="col-12 d-flex">
+          <div class="col-12 d-flex position__relative">
             <a href="#" class="btn btn__purple mx-auto">
               Lihat Selengkapnya
               <svg  class="svg svg__arrow svg__arrowGray">
                 <use xlink:href="#arrow__btn" />
               </svg>
             </a>
+            <img class="ulir__small ulir__r__3 position__absolute position__r position__t position__b m-auto" src="images/svg/ulir__dayak6.svg" alt="">
+            <img class="ulir__small ulir__l__3 position__absolute position__l position__t position__b m-auto" src="images/svg/ulir__dayak6.svg" alt="">
           </div>
         </div> 
+
       </div>
     </div>  
 
@@ -1061,9 +1097,10 @@
             </div>
           </div>
         </div> 
-        <div class="row d-none d-lg-block">
+        <div class="row d-none d-lg-block position__relative">
+          <img class="ulir__big ulir__b ulir__l__6 position__absolute position__l position__b m-auto" src="images/svg/ulir__dayak1.svg" alt="">   
           <div class="d-flex flex-row-reverse align-items-center px-lg-5 border__bottom1__lg border__gray3">
-            <div class="section__img section__img--big border__none__lg col-lg-8 p-lg-0 p-0">
+            <div class="section__img section__img--big border__none__lg col-lg-8 p-lg-0 p-0 z99">
               <div class="itemopenVideo">
                 <img src="images/img33.jpg" alt="">
                 <span class="bg__shadowBottom3">
@@ -1077,7 +1114,8 @@
                 </div>
               </div>
             </div>
-            <div class="section__text col-lg-4 px-3 py-3 mt-4">             
+            <div class="section__text col-lg-4 px-3 py-3 mt-4 position__relative">             
+              <img class="ulir__big ulir__r position__absolute position__r position__t m-auto" src="images/svg/ulir__dayak1.svg" alt="">   
               <small class="mb-2">Jelajah Indonesia Kaya</small>
               <h3>#56: Simak KeseruanFebrian dan AulionMencoba KehidupanSuku Mentawai</h3>
               <p>Mentawai merupakan salah satu kepulauan di Sumatera Barat. Letaknya di sebelah barat Sumatera Baratyang terbentang di Samudera Hindia. Kepulauan ini terbagiatas empat yaitu, Pagai, Sikakap, Siberut, dan Sipora.</p>
@@ -1180,6 +1218,8 @@
                 <use xlink:href="#arrow__btn" />
               </svg>
             </a>
+            <img class="ulir ulir__r position__absolute position__r position__t position__b mx-auto" src="images/svg/ulir__dayak1.svg" alt="">
+            <img class="ulir ulir__l position__absolute position__l position__t position__b mx-auto" src="images/svg/ulir__dayak1.svg" alt="">
           </div>
         </div> 
       </div>
@@ -1193,9 +1233,10 @@
               <h3 class="mb-2 font1">Berlangganan buletin Indonesia Kaya</h3>
               <p class="my-3">Daftar ke buletin email Indonesia Kaya untuk mengikuti berita dan acara terkini.</p>       
             </div>  
-            <svg  class="svg svg__bulletin">
+            <!-- <svg  class="svg svg__bulletin">
               <use xlink:href="#icon__buletin" />
-            </svg>  
+            </svg>   -->
+            <img class="svg svg__bulletin" src="images/svg/icon__buletin2.svg" alt="">
             <div class="col-12 col-lg-4 position__relative mt-4 mb-3 p-0 offset-lg-2">
               <form action="">
                 <input class="col-12 p-2 pl-5" type="text" placeholder="Alamat email kamu">

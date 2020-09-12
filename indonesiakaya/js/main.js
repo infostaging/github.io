@@ -25,7 +25,8 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         infinite: false,
         arrows: true,
-        dots:true,
+        dots:true, 
+        appendArrows: '.agenda__arrow',
         prevArrow: '<button class="circle circle__1 border__gray slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft.svg"></button>',
         nextArrow: '<button class="circle circle__1 border__gray slick-arrow next-arrow"><img src="images/svg/icon__arrowRight.svg"></button>'
     });
@@ -49,8 +50,6 @@ $(document).ready(function(){
     var prevScrollpos = window.pageYOffset;
     var getHeight = $(window).height();
 
-   
-
     function scrollHeader(){
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
@@ -58,7 +57,7 @@ $(document).ready(function(){
         } else {
             $(".header").css("top","-150px");
         }
-        if (currentScrollPos >= getHeight){
+        if (currentScrollPos >= 150){
             $(".header__bar").addClass("open");
         }else{
             $(".header__bar").removeClass("open");
@@ -103,7 +102,7 @@ $(document).ready(function(){
         if($(this).attr('data-click-state') == 1) {
             $(this).attr('data-click-state', 0);
             $(this).children().attr('src', "images/svg/icon__menuMobileClose.svg");    
-            $(".header__search__open").css("display","block");     
+            $(".header__search__open").css("display","flex");     
             $(".header__menu").attr('data-click-state', 1);
             $(".header__menu").children().attr('src', "images/svg/icon__menuMobile.svg");
             $(".nav").css("display","none");
