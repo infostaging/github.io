@@ -9,7 +9,7 @@ $(document).ready(function(){
         arrows: false,
         dots:true
     });
-    $('.kegiatan__slider').slick({
+    $('.sliderFeed').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
@@ -33,16 +33,22 @@ $(document).ready(function(){
 
     //Kunjungi Kami
     $( "#galeri__inka" ).click(function() {
+        var galeri__id = $( this ).attr('id');
+        console.log(galeri__id);
         $( this ).addClass("btn__solidOrange btn__solid");
         $("#taman__inka").removeClass("btn__solidOrange btn__solid");
         $(".section__item__inner").hide();
         $(".section__item__inner1").show();
+        $(".galeri").css("background-image"," url(images/"+galeri__id+".jpg)");
     });
     $( "#taman__inka" ).click(function() {
+        var galeri__id = $( this ).attr('id');
+        console.log(galeri__id);
         $( this ).addClass("btn__solidOrange btn__solid");
         $("#galeri__inka").removeClass("btn__solidOrange btn__solid");
         $(".section__item__inner1").hide();
         $(".section__item__inner2").show();
+        $(".galeri").css("background-image"," url(images/"+galeri__id+".jpg)");
     });
 
 

@@ -5,6 +5,10 @@
 
 .main{
    background: #000;
+
+   &__bgWhite{
+       background:#fff;
+   }
 }
 
 .section{
@@ -129,7 +133,7 @@
             @include min-responsive($md){
                 display: block;
             }
-
+            
     
             & .section__text{
 
@@ -249,9 +253,6 @@
                 }
             }
         }
-
- 
-
     }
     
     &--bgWhite{
@@ -292,6 +293,13 @@
                 @extend .color__blue;
             }
         }
+        & .slick-dots li.slick-active  button:before {
+            @extend .color__blue;
+     
+            @include min-responsive($md){
+                 color: #fff !important;
+            }
+         }
     }
 
     &__orange{
@@ -379,7 +387,7 @@
     &__bg{
 
         &__1{
-            background-image: url(../images/bg_1.jpg);
+           
         }
 
         
@@ -387,7 +395,7 @@
 
             &__m{
                 @include max-responsive($md){
-                    background-image:none;
+                    background-image:none !important;
                 }
             }
         }
@@ -803,37 +811,6 @@
     & .section__img{
         border:none;
     }
-    &__slider{
-
-        & .section__img{
-            height: 400px;
-            @include min-responsive($md){
-                height: 500px;
-            }
-            & .bg__shadowleft2{
-                left: 0;
-                top: 0;
-                height: 100%;
-                width: 100%;
-                
-            }
-        }
-
-        & .slick-dots{
-            top: 410px;
-            bottom: auto;
-            @include min-responsive($md){
-                top: 510px;
-                display: none !important;
-            }
-        }
-        & .section__text{
-
-            @include min-responsive($md){
-                position: absolute;
-            }
-        }
-    }
 
     &__card{
 
@@ -904,6 +881,41 @@
                     }
                 }
             }
+        }
+    }
+}
+
+
+.sliderFeed{
+
+    & .section__img{
+        height: 400px;
+        @include min-responsive($md){
+            height: 500px;
+        }
+        & .bg__shadowleft2{
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 100%;
+            
+        }
+    }
+
+
+    & .section__text{
+
+        @include min-responsive($md){
+            position: absolute;
+        }
+    }
+
+    & .slick-dots{
+        top: 410px;
+        bottom: auto;
+        @include min-responsive($md){
+            top: 510px;
+            display: none !important;
         }
     }
 }
