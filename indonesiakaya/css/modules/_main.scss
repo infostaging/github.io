@@ -905,9 +905,9 @@
 .sliderFeed{
 
     & .section__img{
-        height: 400px;
+        height: 333px;
         @include min-responsive($md){
-            height: 500px;
+            height: 476px;
         }
         & .bg__shadowleft2{
             left: 0;
