@@ -34,6 +34,9 @@
             font-size: 24px;
         }
     }
+    h5{
+        font-size: 24px;
+    }
 
     p.position__absolute{
 
@@ -76,7 +79,6 @@
             }
         }
         h5{
-            font-size: 24px;
             font-family: $font__2;
         }
 
@@ -278,6 +280,7 @@
 
     &--bgGray{
         background: $color__gray3;
+        color: $color__gray;
     }
 
     &__blue{
@@ -297,7 +300,7 @@
             @extend .color__blue;
      
             @include min-responsive($md){
-                 color: #fff !important;
+                 //color: #fff !important;
             }
          }
     }
@@ -580,12 +583,7 @@
     }
 
     &__small{
-        align-items: stretch;
-        display: flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        overflow-x: auto;
-        overflow-y: hidden;
+ 
         margin-top: -40px;
 
         @include min-responsive($md){
@@ -723,6 +721,11 @@
             right: 0;
             top: 16px;
         }
+
+        &__pustaka{
+            right: -85px;
+            width: 230px;
+        }
     }
     h3{
         @include min-responsive($md){
@@ -810,6 +813,19 @@
 
     & .section__img{
         border:none;
+    }
+
+    & .section__text{
+
+        @include min-responsive($md){
+            position: absolute;
+        }
+    }
+
+    & .slick-dots{
+        @include min-responsive($md){
+            display: none !important;
+        }
     }
 
     &__card{
@@ -905,17 +921,15 @@
 
     & .section__text{
 
-        @include min-responsive($md){
-            position: absolute;
-        }
+
     }
 
     & .slick-dots{
         top: 410px;
         bottom: auto;
         @include min-responsive($md){
-            top: 510px;
-            display: none !important;
+            bottom: 20px;
+            top: auto;
         }
     }
 }

@@ -445,6 +445,14 @@
 
 
 //scroll x snap
+.scrollsection{
+  align-items: stretch;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
 .scroll-item{
   scroll-snap-stop: always;
 }
@@ -635,3 +643,11 @@
       }
   }   
 }
+
+//font size
+.font24{
+  font-size: 24px;
+  line-height: 31px
+}
+
+//opacity
