@@ -180,6 +180,12 @@
                     height: 0;
                 }
             }
+            &:nth-child(4){
+
+                hr{
+                    //height: 1px;
+                }
+            }
             
             &--big{
                 
@@ -432,12 +438,12 @@
         }
 
         &__img{
-            height: 70vh;
+            height: 75vh;
             position: relative;
             margin-top: 75px;
 
             @include min-responsive($sm){
-                height: 85vh;
+                height: 83vh;
                 margin-top: 90px;
             }
         }
@@ -925,7 +931,7 @@
     }
 
     & .slick-dots{
-        top: 410px;
+        top: 345px;
         bottom: auto;
         @include min-responsive($md){
             bottom: 20px;

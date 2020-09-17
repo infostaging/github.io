@@ -1,6 +1,6 @@
 $(document).ready(function(){
 
-    $('.headline__slider').slick({
+    $('.headline__slider, .sliderFeed').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
@@ -9,15 +9,7 @@ $(document).ready(function(){
         arrows: false,
         dots:true
     });
-    $('.sliderFeed').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: false,
-        autoplaySpeed: 2000,
-        infinite: true,
-        arrows: false,
-        dots:true,
-    });
+
     $('.agenda__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -55,7 +47,6 @@ $(document).ready(function(){
     //header scroll
     var prevScrollpos = window.pageYOffset;
     var getHeight = $(window).height();
-
     function scrollHeader(){
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
@@ -90,7 +81,6 @@ $(document).ready(function(){
             $(".header__search").children().attr('src', "images/svg/icon__search.svg");
             $(".header__search__open").css("display","none");     
             window.removeEventListener("scroll", scrollHeader); 
-             //$("body").css("overflow","hidden");
             console.log("0");
           }
         else {
@@ -98,7 +88,6 @@ $(document).ready(function(){
             $(this).children().attr('src', "images/svg/icon__menuMobile.svg");
             $(".nav").css("display","none");
             window.addEventListener("scroll", scrollHeader);           
-            //$("body").css("overflow-y","scroll");
             console.log("1");
         } 
       });
@@ -159,11 +148,8 @@ $(document).ready(function(){
     var parentMenu  = $(".header__bar ul li");
     var headerBar  = $(".header__bar");
     var subBarMenu  = $(".header__bar__subbar");
-
     $(parentMenu).each(function() {
-        var dataMenu =  $(this).data("id"); 
-       
-
+        var dataMenu =  $(this).data("id");    
         $(this).hover(function () {
             console.log(dataMenu);  
             $(this).addClass( "show" );
