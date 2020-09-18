@@ -1,3 +1,23 @@
+.body{
+
+    &__page{
+
+        & .header{
+
+            @include min-responsive($md){
+                border-bottom:none !important;
+            }
+
+        }
+
+        & .header__bar{
+            @include min-responsive($md){
+                border-top: 1px solid $color__gray6 !important;
+            }
+        }
+    }
+}
+
 .container{  
     padding: 0;      
     max-width: 1440px ;    
@@ -180,12 +200,7 @@
                     height: 0;
                 }
             }
-            &:nth-child(4){
-
-                hr{
-                    //height: 1px;
-                }
-            }
+  
             
             &--big{
                 
@@ -308,6 +323,18 @@
             @include min-responsive($md){
                  //color: #fff !important;
             }
+         }
+
+         & .tag{
+             ul{
+
+                li{
+
+                    a{
+                        @extend .color__blue;
+                    }
+                }
+             }
          }
     }
 

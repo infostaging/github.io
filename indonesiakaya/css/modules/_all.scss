@@ -265,7 +265,10 @@
   }
 
   &__none{
-    border:none !important;
+    @include max-responsive($md){
+      border:none !important;
+    }
+    
     &__lg{
       @include min-responsive($md){
         border:none !important;
@@ -456,6 +459,9 @@
   }
   &-nowrap{ 
     white-space: nowrap !important; 
+  }
+  &-italic{
+    font-style: italic;
   }
 }
 

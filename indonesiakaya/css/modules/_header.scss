@@ -8,9 +8,9 @@
 	z-index: 99999;
 	@include base_transition(all);	
 	
-		@include min-responsive($md){
-			border-bottom: 1px solid $color__gray6 !important;
-		}
+	@include min-responsive($md){
+		border-bottom: 1px solid $color__gray6 !important;
+	}
 
 
 	img{

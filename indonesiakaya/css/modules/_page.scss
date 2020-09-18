@@ -11,5 +11,54 @@
                 line-height: 62px;
             }
         }
+
+        & .section__feed__item {
+
+            &:nth-child(4){
+
+                hr{
+                   height: 1px;
+                }
+            }
+        }
+
+        &--article{
+
+            & .section__img{
+                height:330px;
+                @include min-responsive($md){
+                    height: 650px;
+                }
+            }
+
+            & .section__text{
+                h3{
+                    font-size: 30px;
+                    line-height: 130%;
+                }
+                p{
+                    font-size: 18px;
+                }
+            }
+
+            & .tag{
+               
+                span{
+                    font-weight: 500;
+                    font-size: 14px;
+                }
+                ul{
+
+                    li{
+
+                        a{
+                            font-size: 14px;
+                        }
+                    }
+                }
+            }
+        }
     }
+
+
 }
