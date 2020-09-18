@@ -267,8 +267,7 @@
   &__none{
     @include max-responsive($md){
       border:none !important;
-    }
-    
+    }    
     &__lg{
       @include min-responsive($md){
         border:none !important;
@@ -601,6 +600,9 @@
   &__super{
       width: 230px !important; 
   }
+  &__superBig{
+      width: 300px !important; 
+  }
 
   &__r{
       right: -50px;
@@ -645,6 +647,9 @@
       }
       &__2{
           top: 250px;
+      }
+      &__3{
+          top: 15px;
       }
   }
   &__b{
