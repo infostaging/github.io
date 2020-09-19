@@ -2,10 +2,26 @@
     fill:#fff;
     stroke: #fff;
 
+    &__src{
+        display: none;
+    }
+
     &__arrow{
-        width: 11px;
-        height: 9px;    
+        height: 0.7rem;
+        width: 0.7rem;   
         fill: none;
+    }
+    &__icon{
+        height: 1.5rem;
+        width: 1.5rem;
+        //stroke-width:0.8;
+        fill:none;
+
+        &__info{
+            width: 20px;
+            height: 20px;
+            fill:none;
+        }
     }
     &__arrowGray{
         stroke: $color__gray;
@@ -23,5 +39,12 @@
                 stroke:#fff;
             }
         }
+    }
+
+    &__blue{        
+        &__fill{
+            fill:$color__blue;
+        }
+        stroke: $color__blue;;
     }
 }

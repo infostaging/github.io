@@ -1,5 +1,6 @@
 .imgfill {
 
+
   & > img{
     width: 100%;
     height: 100%;
@@ -21,6 +22,7 @@
   }
 }
 
+
 .imgAuto > img{
   width: auto;
 }
@@ -40,7 +42,7 @@
   &__lg{
     top: 0;
     right: 0;
-    z-index: 9999;
+    z-index: 99;
   }
   &__small{
     padding:3px 20px;
@@ -293,6 +295,9 @@
   &__gray4{
       border-color: $color__gray2 !important;
   }
+  &__gray5{
+      border-color: $color__gray4 !important;
+  }
   
   &__orange{
       border-color: $color__orange !important;
@@ -348,6 +353,10 @@
     background: rgb(0,0,0);
     background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.4) 35%, rgba(0,0,0,0) 51%, rgba(0,0,0,0) 100%);
   }
+  &__shadowBottomWhite{
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 5%, rgba(255,255,255,0.7) 21%, rgba(255,255,255,0.95) 55%, rgba(255,255,255,1) 100%);
+  }
 
   &__none{
 
@@ -374,10 +383,16 @@
     background: #141414;
   }
   &__gray2{
-    background: $color__gray8;
+    background: $color__gray8 !important;
   }
   &__gray3{
-    background:$color__gray3;
+    background:$color__gray3 !important;
+  }
+  &__gray4{
+    background:$color__gray5 !important;
+  }
+  &__gray5{
+    background:$color__gray2 !important;
   }
 
   &__blue{
@@ -469,6 +484,7 @@
   li{
     display: list-item;
   }
+  
 }
 
 
@@ -699,6 +715,14 @@
   &-x{
     overflow-x: auto;
   }
+  &-hidden{
+    overflow: hidden;
+    &-lg{
+      @include min-responsive($md){
+        overflow: hidden;
+      }
+    }
+  }
 }
 
 //link
@@ -708,4 +732,73 @@
   top: 0;
   width: 100%;
   height: 100%;
+}
+
+
+//post video
+.post-video{
+  position: relative;
+
+  span{
+      color: unset;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img{
+          width: 40px;
+      }
+  }
+}
+
+.itemVideo{
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  position: absolute;
+  top: 0; left: 0; bottom: 0; right: 0;
+  align-items: center;
+  z-index: 9999;
+  display: none;
+
+  
+  &.show{
+      display: flex;
+  }
+
+  & .youtube,
+  iframe{
+      height: 100%;
+      width: 100%;
+  }
+  &__close{
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      right: 5px;
+      top: 5px;
+      background:#fff;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      cursor: pointer;
+  }
+}
+
+
+//hr
+hr{
+  height: 1px;
+  background:$color__gray;
+  border: none;
+  width: 100%;
+
+  @include min-responsive($md){
+      display: none;
+  }
+  
 }

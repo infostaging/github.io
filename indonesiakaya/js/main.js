@@ -23,6 +23,28 @@ $(document).ready(function(){
         nextArrow: '<button class="circle circle__1 border__gray slick-arrow next-arrow"><img src="images/svg/icon__arrowRight.svg"></button>'
     });
 
+    $('.sliderGalery').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: true,
+        arrows: true,
+        dots:true, 
+        centerMode: true,
+        centerPadding: '60px',        
+        variableWidth: true,
+        responsive: [
+            {
+                breakpoint: 992,
+                settings: "unslick"
+            }
+        ],
+        //appendArrows: '.agenda__arrow',
+        prevArrow: '<button class="circle circle__1 border__gray slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft.svg"></button>',
+        nextArrow: '<button class="circle circle__1 border__gray slick-arrow next-arrow"><img src="images/svg/icon__arrowRight.svg"></button>',
+    });
+
     //Kunjungi Kami
     $( "#galeri__inka" ).click(function() {
         var galeri__id = $( this ).attr('id');
@@ -161,6 +183,54 @@ $(document).ready(function(){
             $(headerBar).removeClass(""+dataMenu+"");
         });
     });
+
+    //infoMore
+
+    $('body').each(function(){
+        $('.btn__infoMore').click(function(){
+
+        
+            if($(this).attr('data-click-state') == 1) {
+                $(this).attr('data-click-state', 0);
+                $(".infoMore ul").slideDown();
+                $(this).find(".circle__2").children('img').attr('src', "images/svg/icon__arrowBottom.svg");
+                }
+            else {
+                $(this).attr('data-click-state', 1);
+                $(".infoMore ul").slideUp();
+                $(this).find(".circle__2").children('img').attr('src', "images/svg/icon__arrowTopGray.svg");
+            } 
+        });
+
+    });
+
+
+
+    //popup   
+    $('.sliderGalery').magnificPopup({
+		delegate: 'a',
+		type: 'image',
+		closeOnContentClick: false,
+		closeBtnInside: false,
+		mainClass: 'mfp-with-zoom mfp-img-mobile',
+		image: {
+			verticalFit: true,
+			titleSrc: function(item) {
+				return item.el.attr('title') + ' &middot; <a class="image-source-link" href="'+item.el.attr('data-source')+'" target="_blank">image source</a>';
+			}
+		},
+		gallery: {
+			enabled: true
+		},
+		zoom: {
+			enabled: true,
+			duration: 300, // don't foget to change the duration also in CSS
+			opener: function(element) {
+				return element.find('img');
+			}
+		}
+		
+	});
    
  
 });
