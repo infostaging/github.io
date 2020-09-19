@@ -231,6 +231,7 @@
             a{
                 text-decoration: none;
                 color: $color__gray !important;
+                display: block;
             }
         }
         & .qa{
@@ -266,6 +267,11 @@
                     
 
                 }
+            }
+            a{
+                text-decoration: none;
+                color: $color__gray !important;
+                display: block;
             }
 
         }

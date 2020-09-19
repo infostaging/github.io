@@ -316,7 +316,7 @@
         }
 
         & .section__text--content{
-            p:first-child:first-letter {
+            & > p:first-child:first-letter {
                 @extend .color__blue;
             }
             a{
