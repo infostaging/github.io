@@ -1,7 +1,7 @@
 .section{
  
     &__page{
-        color: $color__gray;
+        
 
         & .title{
             font-size: 24px;
@@ -24,7 +24,8 @@
         }
 
         &--article{
-
+            color: $color__gray;
+            
             & .section__img{
                 height:330px;
                 @include min-responsive($md){
