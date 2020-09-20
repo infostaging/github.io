@@ -15,6 +15,8 @@
 
         & .section__feed__item {
 
+          
+
             &:nth-child(4){
 
                 hr{
@@ -25,6 +27,21 @@
 
         &--article{
             color: $color__gray;
+
+            @include min-responsive($md){                
+                background-image: url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg);
+                background-position: top 1000px right -70px,center left -70px, center right,bottom 100px left -70px;
+                background-repeat: no-repeat;
+                background-size: 250px;
+            }
+
+            & .container--article{
+                margin: 0 auto;
+                width: 100%;
+                @include min-responsive($md){
+                    max-width: 640px;
+                }
+            }
             
             & .section__img{
                 height:330px;
@@ -37,6 +54,11 @@
                 h3{
                     font-size: 30px;
                     line-height: 130%;
+
+                    @include min-responsive($md){
+                        font-size: 56px;
+                        line-height: 59px;
+                    }
                 }
                 p{
                     //font-size: 16px;
@@ -47,8 +69,16 @@
                 }
 
                 &--head{
+                    
+                    @include min-responsive($md){
+                        position: inherit;
+                    }
                     p{
                         font-size: 18px;
+                        @include min-responsive($md){
+                            font-size: 24px;
+                            line-height: 140%;
+                        }
                     }
                 }
 
@@ -79,29 +109,49 @@
                         h2{
                             font-size: 24px;
                             line-height: 130%;
+
+                            @include min-responsive($md){
+                                font-size: 36px;
+                            }
                         }
                         h5{
                             font-size: 14px;
                             margin-top: 20px;
+                            @include min-responsive($md){
+                                font-size: 24px;
+                                line-height: 150%;
+                            }
                         }
                     }
                     figure{
-                        padding: 0;
-                        margin: 30px 0;
+                        margin: 10px 0;
+                        padding: 30px 0;
 
-                        & figcaption{
-                            font-size: 12px;
-                            line-height: 130%;
-                            margin: 5px 0;
-                            @extend .color__gray4;
+                        @include min-responsive($md){
+                            margin: 30px 0;
+                        }
+                    }
+
+                    figcaption{
+                        font-size: 12px;
+                        line-height: 130%;
+                        margin: 5px 0;
+                        @extend .color__gray4;
+                        
+                        @include min-responsive($md){
+                            text-align: center;
+                            font-size: 14px;
+                            margin: 10px 0;
                         }
                     }
 
                     ul { 
                         list-style-type: disc;
+                        margin-bottom: 10px;
                      }
                      ol { 
                         list-style-type: decimal; 
+                        margin-bottom: 10px;
                      }
                      ul li{ 
                         list-style-type: disc; 
@@ -117,10 +167,20 @@
             }
 
             & .tag{
-               
+                
+                @include min-responsive($md){
+                    display: flex;
+                    align-items: center;
+                }
                 span{
                     font-weight: 500;
                     font-size: 14px;
+
+                    @include min-responsive($md){
+                        font-size: 16px;
+                        line-height: 21px;
+                        margin-right: 10px;
+                    }
                 }
                 ul{
 
@@ -128,7 +188,28 @@
 
                         a{
                             font-size: 14px;
+                            @include min-responsive($md){
+                                font-size: 16px;
+                                line-height: 21px;
+                            }
                         }
+                    }
+                }
+            }
+
+            & .socmed {
+                
+                @include min-responsive($md){
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                }
+
+                ul{
+                    li{
+                       @include min-responsive($md){
+                        display: list-item;
+                       }
                     }
                 }
             }
@@ -142,6 +223,12 @@
 
                 p{
                     margin:0;
+                    font-size: 14px;
+
+                    @include min-responsive($md){
+                        font-size: 16px;
+                        line-height: 21px;
+                    }
                 }
 
                 ul{
@@ -177,9 +264,26 @@
                     display: block;
                 }
             }
+
+            hr{
+                @include min-responsive($md){
+                    display: block !important;
+                }
+             }
         }
 
         & .sliderGalery{
+
+            &__wrap{
+
+                figcaption{
+                    display: none;
+
+                    @include min-responsive($md){
+                        display: block;
+                    }
+                }
+            }
 
             & > div{
                 height: 155px;
@@ -193,15 +297,33 @@
                     height: 100%;
                     max-height: 100%;
                     max-width: none;
+                }
+            }
 
-                    @include min-responsive($md){
-                        // width: 100%;
-                        // height: 100%;
-                        // object-position: 50% 50%;
-                        // -o-object-fit: cover;
-                        // object-fit: cover;
-                    }
+            &__dot,
+            & .slick-arrow{
+               @include min-responsive($md){
+                    bottom: -60px;
+                    top: auto;
+               }
+            }
 
+            & .prev-arrow {
+                left: 10%;
+            }
+            .next-arrow {
+                right: 10%;
+            }
+        }
+
+        & .dualGalery{
+
+            figure{
+                width: 100%;
+                padding: 0;
+                @include min-responsive($md){
+                    width: 35%;  
+                    padding: 0 10px;                 
                 }
             }
         }
@@ -210,9 +332,18 @@
             border-left: 1px solid $color__gray8 !important;
             border-bottom: 1px solid $color__gray8 !important;
             border-right: 1px solid $color__gray8 !important;
+
+            @include min-responsive($md){
+                width: 80%;
+                margin: 0 auto;
+            }
+
             h5{
                 @extend .font1;
                 font-size: 18px;
+                @include min-responsive($md){
+                    font-size: 20px;
+                }
             }
             ul{
                 padding: 0;
@@ -225,7 +356,11 @@
                     border-bottom: 1px solid $color__gray8 !important;
                     small,p{
                         font-size: 14px;
-                        margin: 0;                        
+                        margin: 0;     
+                        
+                        @include min-responsive($md){
+                            font-size: 16px;
+                        }
                     }
                 }
             }
@@ -253,7 +388,11 @@
                         font-size: 16px;
                         line-height: 150%;
                         display: block;
-                        color: #000 !important; 
+                        color: #000 !important;
+                        
+                        @include min-responsive($md){
+                            font-size: 18px;
+                        }
                     }
                     &.font2{
                         span{
@@ -280,3 +419,6 @@
 
 
 }
+
+
+

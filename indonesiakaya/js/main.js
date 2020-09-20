@@ -30,19 +30,19 @@ $(document).ready(function(){
         autoplaySpeed: 2000,
         infinite: true,
         arrows: true,
-        dots:true, 
+        dots:false, 
         centerMode: true,
         centerPadding: '60px',        
         variableWidth: true,
+        //appendArrows: '.sliderGalery__dot',
+        prevArrow: '<button class="circle circle__1 border__gray slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft.svg"></button>',
+        nextArrow: '<button class="circle circle__1 border__gray slick-arrow next-arrow"><img src="images/svg/icon__arrowRight.svg"></button>',
         responsive: [
             {
-                breakpoint: 992,
+                breakpoint: 769,
                 settings: "unslick"
             }
         ],
-        //appendArrows: '.agenda__arrow',
-        prevArrow: '<button class="circle circle__1 border__gray slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft.svg"></button>',
-        nextArrow: '<button class="circle circle__1 border__gray slick-arrow next-arrow"><img src="images/svg/icon__arrowRight.svg"></button>',
     });
 
     //Kunjungi Kami
