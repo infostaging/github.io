@@ -25,7 +25,8 @@
             }
         }
 
-        &--article{
+        &--article,
+        &--default{
             color: $color__gray;
 
             @include min-responsive($md){                
@@ -164,6 +165,15 @@
                         display: list-item;
                      }
                 }
+                &--default{
+                    & > p:first-child:first-letter {
+                        float: none;                     
+                        font-size: inherit;
+                        padding-top: 0;
+                        padding-right: 0;
+                        @extend .font1;
+                    }
+                }
             }
 
             & .tag{
@@ -270,6 +280,15 @@
                     display: block !important;
                 }
              }
+        }
+
+        &--default{
+            @include min-responsive($md){                
+                background-image: url(../images/svg/icon__default3.svg),url(../images/svg/icon__default4.svg);
+                background-position: top 250px left -65px, top 300px right -65px;
+                background-repeat: no-repeat;
+                background-size: auto;
+            }
         }
 
         & .sliderGalery{

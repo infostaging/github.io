@@ -470,14 +470,21 @@
     height: 100vh;
     overflow: hidden;
 
+    &:hover{
+
+        & .headline__slider__arrow{        
+            
+
+            @include min-responsive($lg){
+                display: flex;
+            }
+        }
+    }
+
     & .container{
         height: 100%;
         position: relative;
 
-        @include max-responsive($lg){
-            position: inherit;
-            height: auto;
-        }
     }
       
     &__slider{
@@ -500,6 +507,7 @@
             }
         }
         
+        
         span{
             position: absolute;
             width: 100%;
@@ -508,6 +516,47 @@
             top: 0;
             left: 0;
             right: 0;
+        }
+
+        &__dots{
+            bottom: 180px;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            height: auto;
+            width: 100%;
+
+            & .container{
+                height: auto;
+            }
+            
+            @include min-responsive($sm){
+                bottom: 25%;
+            }
+            @include min-responsive($md){
+                bottom: 20%;
+                //padding: 0 3rem !important;
+            }
+            @include min-responsive($lg){
+                bottom: 25%;
+            }
+        }
+        &__arrow{
+            display: none;
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            width: 100%;
+            bottom: 0;
+            top: 0;
+            height: 50px;            
+            align-items: center;
+
+            & .container{
+                height: auto;
+            }
         }
     }
 
@@ -520,7 +569,10 @@
         height: auto;
         width: 100%;
 
- 
+        & .container{
+            height: auto;
+            position: relative;
+        }
 
         small{
             @extend .color__orange;
@@ -528,22 +580,8 @@
     }
 
     & .slick-dots {
-        bottom: 180px;
-
-      
-        @include min-responsive($sm){
-            bottom: 25%;
-           
-        }
-        @include min-responsive($md){
-            bottom: 20%;
-            padding: 0 3rem !important;
-        }
-        @include min-responsive($lg){
-            bottom: 25%;
-        }
-
-
+        bottom: 0;
+        position: relative;
     }   
     & .slick-dots li.slick-active  button:before {
         color: #fff;

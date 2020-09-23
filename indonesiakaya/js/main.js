@@ -1,6 +1,22 @@
 $(document).ready(function(){
 
-    $('.headline__slider, .sliderFeed').slick({
+    $('.headline__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: false,
+        arrows: true,
+        dots:true,
+        appendDots: '.headline__slider__dots__slot',
+        appendArrows: '.headline__slider__arrow__slot',
+        prevArrow: '<button class="circle circle__1 border__white slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft_white.svg"></button>',
+        nextArrow: '<button class="circle circle__1 border__white slick-arrow next-arrow"><img src="images/svg/icon__arrowRight_white.svg"></button>'        
+    });
+
+
+
+    $('.sliderFeed').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
@@ -9,6 +25,7 @@ $(document).ready(function(){
         arrows: false,
         dots:true
     });
+
 
     $('.agenda__slider').slick({
         slidesToShow: 1,
@@ -37,6 +54,7 @@ $(document).ready(function(){
         //appendArrows: '.sliderGalery__dot',
         prevArrow: '<button class="circle circle__1 border__gray slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft.svg"></button>',
         nextArrow: '<button class="circle circle__1 border__gray slick-arrow next-arrow"><img src="images/svg/icon__arrowRight.svg"></button>',
+        asNavFor: '.sliderGalery-for',
         responsive: [
             {
                 breakpoint: 769,
@@ -44,6 +62,20 @@ $(document).ready(function(){
             }
         ],
     });
+
+    $('.sliderGalery-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots:false, 
+        fade: true,
+        responsive: [
+            {
+                breakpoint: 769,
+                settings: "unslick"
+            }
+        ],
+      });
 
     //Kunjungi Kami
     $( "#galeri__inka" ).click(function() {
@@ -63,6 +95,14 @@ $(document).ready(function(){
         $(".section__item__inner1").hide();
         $(".section__item__inner2").show();
         $(".galeri").css("background-image"," url(images/"+galeri__id+".jpg)");
+    });
+    $('.facility_btn').click(function(){
+        var facility_id = $(this).attr('id');
+        $(this).addClass('btn__solidOrange btn__solid');
+        $(this).siblings().removeClass("btn__solidOrange btn__solid");
+        $('.section__item__inner').hide();
+        $('#'+ facility_id +'__item').show();
+        $(".galeri").css("background-image"," url("+ $(this).attr('data-bg') +")");
     });
 
 
