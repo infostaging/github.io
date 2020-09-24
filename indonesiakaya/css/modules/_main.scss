@@ -2,6 +2,7 @@
 
     &__page{
 
+        
         & .header{
 
             @include min-responsive($md){
@@ -13,6 +14,7 @@
         & .header__bar{
             @include min-responsive($md){
                 border-top: 1px solid $color__gray6 !important;
+                top: 78px !important;
             }
         }
     }

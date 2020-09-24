@@ -220,6 +220,14 @@
                        @include min-responsive($md){
                         display: list-item;
                        }
+
+                       & .svg__icon{
+                           
+                            @include min-responsive($md){
+                                width: 1.8rem;
+                                height: 1.8rem;
+                            }
+                       }
                     }
                 }
             }
@@ -279,6 +287,28 @@
                 @include min-responsive($md){
                     display: block !important;
                 }
+             }
+
+             &__bar{
+                 position: fixed;
+                 bottom: -70px;
+                 left: 0;
+                 right: 0;
+                 border-top:1px solid  $color__gray2;
+                 background: #fff;
+                 z-index: 999;
+                 display: flex;
+                 align-items: center;
+                 @include base_transition(all);
+
+                 h4{
+                     @extend .font2;
+                     white-space: nowrap; 
+                     //width: 40%; 
+                     overflow: hidden;
+                     text-overflow: ellipsis; 
+                     border-bottom: none;
+                 }
              }
         }
 

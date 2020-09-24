@@ -113,8 +113,10 @@ $(document).ready(function(){
         var currentScrollPos = window.pageYOffset;
         if (prevScrollpos > currentScrollPos) {
             $(".header").css("top","0");
+            $(".section__page--article__bar").css("bottom","0");
         } else {
             $(".header").css("top","-150px");
+            $(".section__page--article__bar").css("bottom","-70px");
         }
         if (currentScrollPos >= 150){
             $(".header__bar").addClass("open");

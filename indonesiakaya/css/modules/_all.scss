@@ -449,7 +449,7 @@
     position: fixed;
   }
   &__relative{
-    position: relative;
+    position: relative !important;
   }
   &__inherit{
     position: inherit !important;
