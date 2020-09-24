@@ -903,9 +903,9 @@
             height: 400px;
         }
 
-        @include range-responsive($sm, 990px){
-            height: 300px;
-        }
+        // @include range-responsive($sm, 990px){
+        //     height: 300px;
+        // }
 
         
 
