@@ -25,6 +25,14 @@
             }
         }
 
+
+        & .section__img{
+        
+            &--head{
+                height: 440px;
+            }
+        }
+
         &--article,
         &--default{
             color: $color__gray;
@@ -49,6 +57,7 @@
                 @include min-responsive($md){
                     height: 650px;
                 }
+
             }
 
             & .section__text{

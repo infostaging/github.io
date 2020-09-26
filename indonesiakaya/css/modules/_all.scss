@@ -407,6 +407,9 @@
   &__blue{
     background:$color__blue !important;
   }
+  &__orange{
+    background: $color__orange !important;
+  }
 }
 
 
@@ -465,6 +468,9 @@
   }
   &__b{
     bottom: 0;
+    &__auto{
+      bottom: auto !important;
+    }
   }
   &__auto{
     left: 0;
@@ -852,4 +858,20 @@ hr{
 }
 .container-full-center {
   justify-content: center;
+}
+
+
+//size
+//hFull
+.hFull{
+  height: 100vh;
+}
+.w100{
+  width: 100%;
+}
+.wAuto{
+  width: auto !important;
+}
+.h-1{
+  height: 100px;
 }
