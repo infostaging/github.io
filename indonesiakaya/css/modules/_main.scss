@@ -75,7 +75,7 @@
     &__text{
        
         small{
-            font-size: 16px;
+            font-size: 14px;
             display: block;
             font-weight: 500;
             @include min-responsive($sm){
@@ -131,6 +131,18 @@
 
     &__img{
         @extend .imgfill;
+
+        &--square1{  
+            height: 150px;
+
+            @include min-responsive($sm){
+                height: 350px;
+            }
+            @include min-responsive($md){
+                height: 220px;
+            }
+          
+        }
     }
 
     &__item{
@@ -276,15 +288,6 @@
         background: #fff;
         color: $color__gray;
 
-        h2{
-            //border-bottom: 1px solid $color__gray5;
-        }
-        h4{
-            border-bottom: 1px solid $color__gray2;
-            @include min-responsive($md){
-                border:0;
-            }
-        }
         hr{
             background:$color__gray2;
         }
@@ -823,6 +826,11 @@
         &__pustaka{
             right: -85px;
             width: 230px;
+        }
+        &__kungjungikami{
+            right: -25px;
+            width: 135px;
+            height: auto;
         }
     }
     h3{

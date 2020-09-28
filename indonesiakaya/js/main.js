@@ -26,6 +26,27 @@ $(document).ready(function(){
         dots:true
     });
 
+    $('.sliderFeed2').slick({
+        // slidesToShow: 4,
+        // slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: true,
+        arrows: false,
+        dots:true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick"
+            },
+            {
+                breakpoint: 1024,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+            }
+        ],
+    });
+
 
     $('.agenda__slider').slick({
         slidesToShow: 1,
@@ -57,8 +78,15 @@ $(document).ready(function(){
         asNavFor: '.sliderGalery-for',
         responsive: [
             {
-                breakpoint: 769,
-                settings: "unslick"
+                breakpoint: 1024,
+                settings: {
+                    centerMode: false,
+                    variableWidth: false,
+                    slidesToShow:1,
+                    arrows: false,
+                }
+    
+                //settings: "unslick"
             }
         ],
     });
@@ -68,11 +96,22 @@ $(document).ready(function(){
         slidesToScroll: 1,
         arrows: false,
         dots:false, 
-        fade: true,
+        fade: true,       
+        centerMode: true,
+        asNavFor: '.sliderGalery',
         responsive: [
             {
-                breakpoint: 769,
-                settings: "unslick"
+                breakpoint: 1024,
+                settings:{
+                    slidesToShow: 1,
+                    centerMode: false,
+                    fade: false,  
+                }
+                // prevArrow: false,
+                // nextArrow: false,
+                // arrows: false,
+                //settings: "unslick"
+                
             }
         ],
       });
