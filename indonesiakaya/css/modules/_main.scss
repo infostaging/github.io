@@ -120,6 +120,9 @@
                 }
                 span{
                     font-size: 14px;
+                    @include min-responsive($md){
+                        font-size: 16px;
+                    }
                 }
             }
         }
@@ -381,6 +384,54 @@
                 @extend .color__orange;
             }
         }
+        &.section__page--article{    
+
+            @include min-responsive($md){                
+                background-image: url(../images/svg/ulir__dayak7e.svg),url(../images/svg/ulir__dayak7e.svg);
+                background-position: top 1000px left -15px,top 2300px right -15px;
+                background-repeat: no-repeat;
+                background-size: 130px;
+            }
+        }
+
+        & .section__text--content{
+            & > p:first-child:first-letter {
+                @extend .color__orange;
+            }
+            a{
+                text-decoration: underline;
+                @extend .color__orange;
+            }
+            blockquote,
+            q{
+                background-image: none;
+
+                h5{
+                    @extend .color__orange;
+                }
+            }
+        }
+        & .slick-dots li.slick-active  button:before {
+            @extend .color__orange;
+    
+            @include min-responsive($md){
+                //color: #fff !important;
+            }
+        }
+
+        & .tag{
+            ul{
+
+                li{
+
+                    a{
+                        @extend .color__orange;
+                    }
+                }
+            }
+        }
+
+        
     }
 
     &__orange2{
@@ -831,6 +882,23 @@
             right: -25px;
             width: 135px;
             height: auto;
+
+            @include min-responsive($md){
+                top: -63px;
+            }
+        }
+        &__kungjungikami2{
+            right: -80px;
+            width: 185px;
+            height: auto;
+            top: 40px;
+
+            @include min-responsive($md){
+                top: 0;
+                right: -60px;
+                width: 200px;
+                height: auto;
+            }
         }
     }
     h3{

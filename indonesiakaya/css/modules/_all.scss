@@ -46,6 +46,10 @@
   font-size: 14px;
   justify-content: center;
 
+  @include min-responsive($md){
+    padding: 15px 40px;
+  }
+
   &__lg{
     top: 0;
     right: 0;
@@ -178,6 +182,9 @@
 }
 
 //text color 
+.color__black{
+  color: #000 !important;
+}
 .color__white{
   color:#fff !important;
 }
@@ -467,6 +474,12 @@
   }
   &__relative{
     position: relative !important;
+
+    &__lg{
+      @include min-responsive($md){
+        position: relative !important;
+      }
+    }
   }
   &__inherit{
     position: inherit !important;
@@ -484,6 +497,21 @@
     bottom: 0;
     &__auto{
       bottom: auto !important;
+    }
+    &__1{
+      bottom: 50px;
+    }
+    &__2{
+      bottom: 60px;
+    }
+    &__3{
+      bottom: 80px;
+    }
+    &__4{
+      bottom: 100px;
+    }
+    &__5{
+      bottom: 150px;
     }
   }
   &__auto{
@@ -659,7 +687,13 @@
   &__small2{
       width: 35px!important; 
   }
+  &__small3{
+      width: 60px!important; 
+  }
   &__big{
+      width: 140px !important; 
+  }
+  &__big2{
       width: 120px !important; 
   }
   &__super{
@@ -707,6 +741,9 @@
       &__6{
           left: -50px;
       }
+      &__7{
+        left: 430px;
+      }
   }
   &__t{
 
@@ -718,6 +755,18 @@
       }
       &__3{
           top: 15px;
+      }
+      &__4{
+        top: -75px;
+      }
+      &__5{
+        top: -60px;
+      }
+      &__6{
+        top: 170px;
+      }
+      &__7{
+        top: -10px;
       }
   }
   &__b{

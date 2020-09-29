@@ -2,6 +2,11 @@
     fill:#fff;
     stroke: #fff;
 
+    &__left{
+        margin-left: 0;
+        margin-right: 10px;
+    }
+
     &__src{
         display: none;
     }
@@ -46,5 +51,11 @@
             fill:$color__blue;
         }
         stroke: $color__blue;;
+    }
+    &__orange{        
+        &__fill{
+            fill:$color__orange;
+        }
+        stroke: $color__orange;;
     }
 }

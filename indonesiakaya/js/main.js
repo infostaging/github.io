@@ -27,8 +27,26 @@ $(document).ready(function(){
     });
 
     $('.sliderFeed2').slick({
-        // slidesToShow: 4,
-        // slidesToScroll: 1,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: true,
+        arrows: false,
+        dots:true,
+        responsive: [
+            {
+                breakpoint: 9999,
+                settings: "unslick",
+            },
+            {
+                breakpoint: 1024
+            }
+        ],
+    });
+    $('.slider2Col').slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 2000,
         infinite: true,
@@ -40,9 +58,7 @@ $(document).ready(function(){
                 settings: "unslick"
             },
             {
-                breakpoint: 1024,
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                breakpoint: 1024
             }
         ],
     });
@@ -91,6 +107,35 @@ $(document).ready(function(){
         ],
     });
 
+    $('.sliderGalery--white').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        autoplay: false,
+        autoplaySpeed: 2000,
+        infinite: true,
+        arrows: true,
+        dots:false, 
+        centerMode: true,
+        centerPadding: '60px',        
+        variableWidth: true,
+        //appendArrows: '.sliderGalery__dot',
+        prevArrow: '<button class="circle circle__1 border__white slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft_white.svg"></button>',
+        nextArrow: '<button class="circle circle__1 border__white slick-arrow next-arrow"><img src="images/svg/icon__arrowRight_white.svg"></button>',
+        asNavFor: '.sliderGalery--white-for',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings: {
+                    centerMode: false,
+                    variableWidth: false,
+                    slidesToShow:1,
+                    arrows: false,
+                }
+
+            }
+        ],
+    });
+
     $('.sliderGalery-for').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -107,11 +152,26 @@ $(document).ready(function(){
                     centerMode: false,
                     fade: false,  
                 }
-                // prevArrow: false,
-                // nextArrow: false,
-                // arrows: false,
-                //settings: "unslick"
-                
+            }
+        ],
+      });
+
+    $('.sliderGalery--white-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        dots:false, 
+        fade: true,       
+        centerMode: true,
+        asNavFor: '.sliderGalery--white',
+        responsive: [
+            {
+                breakpoint: 1024,
+                settings:{
+                    slidesToShow: 1,
+                    centerMode: false,
+                    fade: false,  
+                }
             }
         ],
       });
@@ -155,7 +215,7 @@ $(document).ready(function(){
             $(".section__page--article__bar").css("bottom","0");
         } else {
             $(".header").css("top","-150px");
-            $(".section__page--article__bar").css("bottom","-70px");
+            $(".section__page--article__bar").css("bottom","-100px");
         }
         if (currentScrollPos >= 150){
             $(".header__bar").addClass("open");
@@ -280,8 +340,20 @@ $(document).ready(function(){
         } 
     });
 
+    //selectToggle
+    $('#selectToggle').click(function(){
+    
+        if($(this).attr('data-click-state') == 1) {
+            $(this).attr('data-click-state', 0);
+            $(this).css("background-image", "url(../images/svg/icon__arrowBottom.svg)");
+        } else {
+            $(this).attr('data-click-state', 1);
+            $(this).css("background-image", "url(../images/svg/icon__arrowTopGray.svg)");
+        } 
+    });
+
     //popup   
-    $('.sliderGalery').magnificPopup({
+    $('.popupGalery').magnificPopup({
 		delegate: 'a',
 		type: 'image',
 		closeOnContentClick: false,
