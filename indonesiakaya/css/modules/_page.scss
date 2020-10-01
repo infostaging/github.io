@@ -312,6 +312,8 @@
                     overflow-x: hidden;
                     overflow-y: auto;
                     padding-bottom: 100px;
+
+                    @extend .customscrollbar;
                 }  
                 
                 & .bg{
