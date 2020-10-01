@@ -501,6 +501,13 @@
         }
     }
 
+    &__basic{
+        & .section__img{
+            border-bottom: 5px solid;
+        }
+
+    }
+
     &__bg{
 
         &__1{
