@@ -9,7 +9,7 @@
 	@include base_transition(all);	
 	
 	@include min-responsive($md){
-		border-bottom: 1px solid $color__gray6 !important;
+		//border-bottom: 1px solid $color__gray6 !important;
 	}
 
 
@@ -99,9 +99,13 @@
 	&__bar{
 		position: absolute;
 		width: 100%;
-		top:79px;
+		top:78px;
 		border-bottom:1px solid #000;
 		display: none !important;
+
+		@include min-responsive($md){
+			border-top: 1px solid $color__gray6 !important;
+		}
 
 		&.open{
 			@include min-responsive($md){

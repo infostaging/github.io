@@ -466,7 +466,7 @@
         & .section__text{
             
             small{
-                @extend .color__green;
+                //@extend .color__green2;
             }
         }
     }
@@ -566,7 +566,7 @@
 
             @include min-responsive($sm){
                 height: 83vh;
-                margin-top: 90px;
+                margin-top: 80px;
             }
         }
         
@@ -708,7 +708,7 @@
             margin-top: 0;
         }
         & .section__img{
-            height: 480px;
+            height: 625px;
             box-shadow:none;
             @extend .imgfill;
 
@@ -723,7 +723,7 @@
             }
 
             small{
-                @extend .color__green2;
+                @extend .color__gray4;
             }
 
      
