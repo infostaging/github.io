@@ -638,7 +638,7 @@
         }
 
         small{
-            @extend .color__orange;
+            //@extend .color__orange;
         }
     }
 
@@ -701,14 +701,14 @@
     }
 
     &__big{
-        margin-top: -69px;
+        //margin-top: -69px;
         @include min-responsive($md){
             flex-direction: row-reverse;
             flex-wrap: wrap;
             margin-top: 0;
         }
         & .section__img{
-            height: 625px;
+            height: 485px;
             box-shadow:none;
             @extend .imgfill;
 
@@ -723,7 +723,7 @@
             }
 
             small{
-                @extend .color__gray4;
+                //@extend .color__gray4;
             }
 
      
@@ -788,7 +788,7 @@
 }
 
 .agenda{
-    border-bottom: 1px solid $color__gray5;
+    //border-bottom: 1px solid $color__gray5;
 
     .section__img{
         height: 360px;
@@ -953,7 +953,7 @@
     &__btn{
 
         @include min-responsive($md){
-            left: 0;
+            left: 10px;
             bottom: 25px;
             width: auto;
         }
@@ -976,7 +976,7 @@
 
     & .slick-dots{
         @include min-responsive($md){
-            display: none !important;
+            //display: none !important;
         }
     }
 
@@ -1053,8 +1053,8 @@
     }
 }
 
-
-.sliderFeed{
+.sliderFeed,
+.sliderFeedNone{
 
     & .section__img{
         height: 333px;
@@ -1070,18 +1070,59 @@
         }
     }
 
-
-    & .section__text{
-
-
-    }
-
     & .slick-dots{
         top: 345px;
         bottom: auto;
         @include min-responsive($md){
             bottom: 20px;
             top: auto;
+        }
+    }
+
+    &__wrap{
+        
+        .slick-arrow{     
+           display: none !important;
+        }
+    
+        &:hover{
+    
+            .slick-arrow{        
+                
+                @include min-responsive($lg){
+                    display: flex !important;
+                }
+            }
+    
+            .slick-disabled{        
+                display: none !important;
+            }
+    
+        }
+    
+        .slick-disabled{        
+            display: none !important;
+        }
+    }
+
+    &__arrow{
+        position: absolute;
+        top: 50%;
+        width: 100%;
+
+        .prev-arrow {
+
+        }
+        .next-arrow {
+            right: 50px;
+        }
+
+        &.col-lg-6{
+
+            .prev-arrow {
+                left: 0;
+            }
+
         }
     }
 }

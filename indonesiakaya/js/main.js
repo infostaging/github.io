@@ -21,9 +21,18 @@ $(document).ready(function(){
         slidesToScroll: 1,
         autoplay: false,
         autoplaySpeed: 2000,
-        infinite: true,
-        arrows: false,
-        dots:true
+        infinite: false,
+        arrows: true,
+        dots:true,
+        appendArrows: '.sliderFeed__arrow',
+        prevArrow: '<button class="circle circle__1 border__white slick-arrow prev-arrow"><img src="images/svg/icon__arrowLeft_white.svg"></button>',
+        nextArrow: '<button class="circle circle__1 border__white slick-arrow next-arrow"><img src="images/svg/icon__arrowRight_white.svg"></button>',  
+        responsive: [
+            {
+                breakpoint: 1024,
+                arrows: false,
+            }
+        ],
     });
 
     $('.sliderFeed2').slick({

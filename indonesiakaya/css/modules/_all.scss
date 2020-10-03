@@ -45,6 +45,7 @@
   text-align: center;
   font-size: 14px;
   justify-content: center;
+  z-index: 1;
 
   @include min-responsive($md){
     padding: 15px 40px;
@@ -184,9 +185,20 @@
 //text color 
 .color__black{
   color: #000 !important;
+
+  &__lg{
+    @include min-responsive($md){
+      color: #000;
+    }
+  }
 }
 .color__white{
   color:#fff !important;
+  &__lg{
+    @include min-responsive($md){
+      color: #fff;
+    }
+  }
 }
 .color__orange{
   color:$color__orange !important;
@@ -744,6 +756,9 @@
       &__7{
         left: 430px;
       }
+      &__8{
+        left: -40px;
+      }
   }
   &__t{
 
@@ -768,6 +783,9 @@
       &__7{
         top: -10px;
       }
+      &__8{
+        top: -40px;
+      }
   }
   &__b{
       bottom: 20px;
@@ -777,6 +795,12 @@
       }
       &__3{
           bottom: -150px;
+      }
+      &__4{
+          bottom: 100px;
+      }
+      &__5{
+          bottom: -50px;
       }
   }
   &__opacity3{
