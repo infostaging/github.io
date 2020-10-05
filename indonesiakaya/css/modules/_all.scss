@@ -678,7 +678,7 @@
 
 //ulir
 .ulir{
-  width: 100px !important;
+  width: 114px !important;
   filter: none !important;
   //z-index: 99;
 
@@ -694,16 +694,16 @@
   }
 
   &__small{
-      width: 75px!important; 
+      width: 85px !important; 
   }
   &__small2{
-      width: 35px!important; 
+      width: 40px !important; 
   }
   &__small3{
       width: 60px!important; 
   }
   &__big{
-      width: 140px !important; 
+      width: 110px !important; 
   }
   &__big2{
       width: 120px !important; 
@@ -716,7 +716,7 @@
   }
 
   &__r{
-      right: -50px;
+      right:-30px;
       @include min-responsive($md){
           right: -40px;
       }
@@ -730,9 +730,12 @@
       &__4{
           right: -70px;
       }
+      &__5{
+          right: -55px;
+      }
   }
   &__l{
-      left: -50px;
+      left:-30px;
 
       @include min-responsive($md){
           left: -40px;
@@ -758,6 +761,9 @@
       }
       &__8{
         left: -40px;
+      }
+      &__9{
+        left: -55px;
       }
   }
   &__t{
@@ -824,6 +830,14 @@
   font-size: 24px;
   line-height: 31px
 }
+.font28{
+  font-size: 28px !important;
+  line-height: 30px;
+  @include min-responsive($md){
+    font-size: 32px !important;
+    line-height: 34px;
+  }
+}
 .font1{
   font-family: $font__1 !important;
 }
@@ -832,6 +846,9 @@
 }
 .font_bold{
   font-weight: 500;
+}
+.font_medium{
+  font-weight: 400;
 }
 
 //overflow

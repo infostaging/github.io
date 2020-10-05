@@ -58,6 +58,11 @@
     }
     h5{
         font-size: 24px;
+        line-height: 1.1;
+
+        @include min-responsive($md){
+            line-height: 1.3;
+        }
     }
 
     p.position__absolute{
@@ -86,6 +91,7 @@
         h3{
             font-size: 28px;
             font-family: $font__2;
+
             
             @include min-responsive($sm){
                 font-size: 40px;
@@ -93,6 +99,8 @@
             }
 
             &.font__big{
+                line-height: 1.1;
+
                 @include min-responsive($md){
                     font-size: 56px !important;
                     line-height: 59px  !important;
@@ -217,7 +225,7 @@
                     h3{
                         font-size: 28px;
                         font-family: $font__2;
-                        
+                        line-height: 1.1;
                         @include min-responsive($sm){
                             font-size: 40px;
                             line-height: 42px;
@@ -285,6 +293,17 @@
                 }
             }
         }
+
+
+        &__event{
+
+            li{
+
+                span{
+                    @extend .color__gray6;
+                }
+            }    
+        }
     }
     
     &--bgWhite{
@@ -324,14 +343,17 @@
         }
 
         &.section__page--article{    
+            background-image: url(../images/svg/ulir__dayak4g.svg);
+            background-position: bottom 120px right -5px;
+            background-repeat: no-repeat;
 
-                @include min-responsive($md){                
-                    background-image: url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg);
-                    background-position: top 1000px right -70px,top 2300px right -70px, bottom 50vh right -70px, bottom 30vh left -70px,top 2700px left -70px, ;
-                    background-repeat: no-repeat;
-                    background-size: 250px;
-                }
-        }
+            @include min-responsive($md){                
+                background-image: url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg),url(../images/svg/bg__ulir1.svg);
+                background-position: top 1000px right -70px,top 2300px right -70px, bottom 50vh right -70px, bottom 30vh left -70px,top 2700px left -70px, ;
+                background-repeat: no-repeat;
+                background-size: 250px;
+            }
+    }
 
         & .section__text--content{
             & > p:first-child:first-letter {
@@ -385,6 +407,11 @@
             }
         }
         &.section__page--article{    
+            background-image: url(../images/svg/ulir__dayak7d.svg);
+            background-position: bottom 105px right -5px;
+            background-repeat: no-repeat;
+            background-size: 45px;
+
 
             @include min-responsive($md){                
                 background-image: url(../images/svg/ulir__dayak7e.svg),url(../images/svg/ulir__dayak7e.svg);
@@ -808,6 +835,16 @@
             max-height: 100%;
             width: auto;
             height: auto;
+        }
+    }
+
+    & .section__text{
+
+        h3{
+           
+            @include max-responsive($md){
+                font-size: 31px;
+            }
         }
     }
 
