@@ -698,7 +698,7 @@
       height: auto !important;
   }
   &__hfull{
-    height: 100%;
+    height: 90%;
     width: auto;
   }
 
@@ -742,6 +742,12 @@
       &__5{
           right: -55px;
       }
+      &__6{
+          right: -5px;
+      }
+      &__7{
+          right: 10px;
+      }
   }
   &__l{
       left:-30px;
@@ -773,6 +779,9 @@
       }
       &__9{
         left: -55px;
+      }
+      &__10{
+        left: 10px;
       }
   }
   &__t{

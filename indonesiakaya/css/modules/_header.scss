@@ -40,7 +40,7 @@
 			display: none;
 			background: #000;
 			height: 100vh;
-			top:0;
+			//top:0;
 			z-index: -1;
 			@include min-responsive($md){
 				height: auto;			
@@ -169,6 +169,16 @@
 				display: block;
 			}
 		}
+	}
+
+	&__line{
+		width: 100%;
+		position: fixed;
+		left: 0;
+		right: 0;
+		top: 0;
+		width: 100%;
+		z-index: 999;
 	}
 }
 

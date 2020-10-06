@@ -48,8 +48,22 @@
             &:nth-child(4){
 
                 hr{
-                   height: 1px;
+                   //height: 1px;
                 }
+            }
+
+            &__4{
+
+                & .section__feed__item{
+                    
+                    &:nth-child(4){
+    
+                        hr{
+                           height: 1px;
+                        }
+                    }
+                }
+                
             }
         }
 
