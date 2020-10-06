@@ -1,4 +1,11 @@
-<svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M13.4167 3.5H14C13.0278 6.22222 9.56667 11.6667 3.5 11.6667M7 14V21H11.6667V16.3333H14" stroke="white"/>
-<path d="M14.5833 3.5H14C14.9722 6.22222 18.4333 11.6667 24.5 11.6667M21 14V21H16.3333V16.3333H14" stroke="white"/>
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 19.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="21px" height="18.5px" viewBox="-189.4 373.8 21 18.5" style="enable-background:new -189.4 373.8 21 18.5;"
+	 xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;stroke:#FFFFFF;}
+</style>
+<path class="st0" d="M-179.5,374.3h0.6c-1,2.7-4.4,8.2-10.5,8.2 M-185.9,384.8v7h4.7v-4.7h2.3"/>
+<path class="st0" d="M-178.3,374.3h-0.6c1,2.7,4.4,8.2,10.5,8.2 M-171.9,384.8v7h-4.7v-4.7h-2.3"/>
 </svg>

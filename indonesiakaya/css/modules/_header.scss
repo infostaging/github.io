@@ -30,11 +30,39 @@
 	&__menu{
 		text-align: left;
 		cursor: pointer;
+		
+		@include max-responsive($md){
+			border: none;
+		}
+
+		@include min-responsive($md){
+			padding: 10px;
+			border-color:#000;
+			@include base_transition(all);
+
+			&:hover{
+				border-color:#fff;
+			}
+		}		
 	}
 
 	&__search{
 		text-align: right;
 		cursor: pointer;
+
+		@include max-responsive($md){
+			border: none;
+		}
+
+		@include min-responsive($md){
+			padding: 10px;
+			border-color:#000;
+			@include base_transition(all);
+			
+			&:hover{
+				border-color:#fff;
+			}
+		}
 
 		&__open{
 			display: none;
@@ -90,9 +118,32 @@
 			
 		}
 	}
-	&__home{
+	&__home{	
 		@include max-responsive($sm){
 			display: none;
+		}
+		@include min-responsive($md){
+			padding: 10px;
+			border-color:#000;
+			@include base_transition(all);
+			
+			&:hover{
+				border-color:#fff;
+			}
+		}
+	}
+	&__calender{
+		@include max-responsive($sm){
+			display: none;
+		}
+		@include min-responsive($md){
+			padding: 10px;
+			border-color:#000;
+			@include base_transition(all);
+			
+			&:hover{
+				border-color:#fff;
+			}
 		}
 	}
 
