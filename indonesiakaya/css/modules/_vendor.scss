@@ -8,7 +8,7 @@
     overflow: hidden;
     position: fixed;
     background: #0b0b0b;
-    opacity: 0.8; }
+    opacity: 0.9; }
   
   .mfp-wrap {
     top: 0;
@@ -56,15 +56,17 @@
     cursor: progress; }
   
   .mfp-zoom-out-cur, .mfp-zoom-out-cur .mfp-image-holder .mfp-close {
-    cursor: -moz-zoom-out;
-    cursor: -webkit-zoom-out;
-    cursor: zoom-out; }
+    // cursor: -moz-zoom-out;
+    // cursor: -webkit-zoom-out;
+    // cursor: zoom-out; 
+  }
   
   .mfp-zoom {
-    cursor: pointer;
-    cursor: -webkit-zoom-in;
-    cursor: -moz-zoom-in;
-    cursor: zoom-in; }
+    // cursor: pointer;
+    // cursor: -webkit-zoom-in;
+    // cursor: -moz-zoom-in;
+    // cursor: zoom-in; 
+  }
   
   .mfp-auto-cursor .mfp-content {
     cursor: auto; }
@@ -109,7 +111,6 @@
     overflow: visible;
     cursor: pointer;
     background: transparent;
-    border: 0;
     -webkit-appearance: none;
     display: block;
     outline: none;
@@ -123,36 +124,50 @@
     border: 0; }
   
   .mfp-close {
+    //display: flex !important;
     width: 44px;
     height: 44px;
-    line-height: 44px;
     position: absolute;
     right: 0;
-    top: 0;
+    top: -10px;
     text-decoration: none;
-    text-align: center;
-    opacity: 0.65;
-    padding: 0 0 18px 10px;
+    text-align: center !important;
+    border: 1px solid;
+    padding:0  !important;
     color: #FFF;
     font-style: normal;
     font-size: 28px;
-    font-family: Arial, Baskerville, monospace; }
+    
+  }
+
+  .mfp-close img {
+    pointer-events: none;  
+    
+  }
     .mfp-close:hover,
     .mfp-close:focus {
       opacity: 1; }
     .mfp-close:active {
-      top: 1px; }
+      top: -10px; }
   
   .mfp-close-btn-in .mfp-close {
-    color: #333; }
+    color: #FFF;
+    right: auto;
+    text-align: left;
+    padding-right: 6px;
+    width: 100%;
+    left: 0;
+  }
   
   .mfp-image-holder .mfp-close,
   .mfp-iframe-holder .mfp-close {
     color: #FFF;
-    right: -6px;
-    text-align: right;
+    right: auto;
+    text-align: left;
     padding-right: 6px;
-    width: 100%; }
+    width: 100%;
+    left: 0;
+  }
   
   .mfp-counter {
     position: absolute;
@@ -165,16 +180,16 @@
   
   .mfp-arrow {
     position: absolute;
-    opacity: 0.65;
     margin: 0;
     top: 50%;
-    margin-top: -55px;
+    //margin-top: -55px;
     padding: 0;
     width: 90px;
     height: 110px;
     -webkit-tap-highlight-color: transparent; }
     .mfp-arrow:active {
-      margin-top: -54px; }
+      //margin-top: -54px; 
+    }
     .mfp-arrow:hover,
     .mfp-arrow:focus {
       opacity: 1; }
@@ -187,7 +202,7 @@
       position: absolute;
       left: 0;
       top: 0;
-      margin-top: 35px;
+      //margin-top: 35px;
       margin-left: 35px;
       border: medium inset transparent; }
     .mfp-arrow:after {
@@ -200,21 +215,34 @@
       opacity: 0.7; }
   
   .mfp-arrow-left {
-    left: 0; }
-    .mfp-arrow-left:after {
-      border-right: 17px solid #FFF;
-      margin-left: 31px; }
-    .mfp-arrow-left:before {
-      margin-left: 25px;
-      border-right: 27px solid #3F3F3F; }
+    left: 0; 
+    background: url(../images/svg/icon__arrowGaleryLeft.svg) no-repeat center center !important;
+    @extend .circle;
+    @extend .circle__3;
+    @extend .border__gray5;
+    left: -60px;
+  }
+    // .mfp-arrow-left:after {
+    //   border-right: 17px solid #FFF;
+    //   margin-left: 31px; }
+    // .mfp-arrow-left:before {
+    //   margin-left: 25px;
+    //   border-right: 27px solid #3F3F3F; }
   
   .mfp-arrow-right {
-    right: 0; }
-    .mfp-arrow-right:after {
-      border-left: 17px solid #FFF;
-      margin-left: 39px; }
-    .mfp-arrow-right:before {
-      border-left: 27px solid #3F3F3F; }
+    right: 0; 
+    background: url(../images/svg/icon__arrowGaleryRight.svg) no-repeat center center !important;
+    @extend .circle;
+    @extend .circle__3;
+    @extend .border__gray5;
+    right: -60px;
+  
+  }
+    // .mfp-arrow-right:after {
+    //   border-left: 17px solid #FFF;
+    //   margin-left: 39px; }
+    // .mfp-arrow-right:before {
+    //   border-left: 27px solid #3F3F3F; }
   
   .mfp-iframe-holder {
     padding-top: 40px;

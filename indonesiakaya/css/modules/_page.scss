@@ -108,8 +108,7 @@
                     }
                 }
                 p{
-                    //font-size: 16px;
-                    
+
                     @include min-responsive($md){
                         font-size: 18px;
                     }
@@ -136,8 +135,14 @@
 
                 &--content{
                     line-height: 24px;
+                    @include min-responsive($md){
+                        line-height: 27px;
+                    }
                     p{
                         line-height: 24px;
+                        @include min-responsive($md){
+                            line-height: 27px;
+                        }
                     }
                     & > p:first-child:first-letter {
                         float: left;                       
@@ -411,8 +416,9 @@
             &__dot,
             & .slick-arrow{
                @include min-responsive($md){
-                    bottom: -60px;
+                    bottom: -80px;
                     top: auto;
+                    
                }
             }
 
@@ -461,6 +467,10 @@
                 font-size: 12px;
                 line-height: 130%;
                 margin: 10px 0;
+
+                @include min-responsive($md){
+                    margin: 24px 0;
+                }
 
                 h5{
                     font-size: 18px;
@@ -639,5 +649,18 @@
     }
 }
 
+.paging{
+    position: relative;
+    
+    ul{
 
+        li{
+
+        }
+    }
+
+    &__active{
+        @extend .text-underline;   
+    }
+}
 

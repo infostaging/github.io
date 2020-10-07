@@ -671,9 +671,13 @@
         bottom: 0;
         position: relative;
     }   
+    & .slick-dots li button:before {
+        color: #7B7B7B;
+    }
     & .slick-dots li.slick-active  button:before {
         color: #fff;
     }
+    
 }
 
 .tokoh{
@@ -904,21 +908,48 @@
     background: $color__gray6;
     overflow: hidden;
 
+    & .container{
+        
+        @include min-responsive($md){
+            position: relative;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+        }
+
+        & .row{
+            @include min-responsive($md){
+                position: unset;
+            }
+        }
+    }
+
     & .svg{
         position: absolute;
         right: -20px;
         top: 25px;
         width: 115px;
         height: 115px;
+        z-index: 0;
 
         @include min-responsive($md){
+            top: 0;
             right: 0;
-            top: 16px;
+            bottom: 0;
+            margin: auto;
+            height: 100%;
+            width: auto;
         }
 
         &__pustaka{
             right: -85px;
             width: 230px;
+            @include min-responsive($md){
+                right: -50px;
+                top: 0;
+                bottom: 0;
+                margin: auto;
+                height: auto;
+            }
         }
         &__kungjungikami{
             right: -25px;
@@ -1013,6 +1044,12 @@
         @include min-responsive($md){
             //display: none !important;
         }
+    }
+    & .slick-dots li button:before {
+        color: #7B7B7B;
+    }
+    & .slick-dots li.slick-active  button:before {
+        color: #fff !important;
     }
 
     &__card{
@@ -1162,15 +1199,22 @@
     }
 }
 
-.paging{
-    ul{
+//popupAuto
+.popupAuto{
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;    
+    padding: 40px 0 40px;
 
-        li{
+    iframe{
+        width: 100%;
+        height: 205px;
 
+        @include min-responsive($sm){
+            height: 400px;
         }
-    }
-
-    &__active{
-        @extend .text-underline;   
+        @include min-responsive($md){
+            height: 450px;
+        }
     }
 }

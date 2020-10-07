@@ -11,7 +11,9 @@ input,
 button,
 select,
 textarea {
-    border: none
+    border: none;
+    -webkit-user-select:text;
+    box-sizing:border-box;
 }
 
 select.styled-select  {

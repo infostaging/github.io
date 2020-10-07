@@ -215,10 +215,13 @@ $(document).ready(function(){
 
 
     //header scroll
-    var prevScrollpos = window.pageYOffset;
+    var prevScrollpos = window.scrollY;
     var getHeight = $(window).height();
     function scrollHeader(){
-        var currentScrollPos = window.pageYOffset;
+        var currentScrollPos = window.scrollY;
+        
+        console.log(currentScrollPos);
+        console.log(prevScrollpos);
         if (prevScrollpos > currentScrollPos) {
             $(".header").css("top","0");
             $(".section__page--article__bar").css("bottom","0");
@@ -366,8 +369,9 @@ $(document).ready(function(){
 		delegate: 'a',
 		type: 'image',
 		closeOnContentClick: false,
-		closeBtnInside: false,
-		mainClass: 'mfp-with-zoom mfp-img-mobile',
+        mainClass: 'mfp-with-zoom mfp-img-mobile',
+        closeMarkup: '<button title="%title%" type="button" class="mfp-close circle circle__imgAuto circle__3 border__white p-0"><img src="images/svg/icon__menuMobileClose.svg"></button>',
+        closeBtnInside: true,
 		image: {
 			verticalFit: true,
 			titleSrc: function(item) {
@@ -383,10 +387,33 @@ $(document).ready(function(){
 			opener: function(element) {
 				return element.find('img');
 			}
-		}
+        },
+        callbacks: {
+          
+            buildControls: function() {
+              // re-appends controls inside the main container
+              this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+            }
+            
+          }
 		
-	});
-   
+    });
+    
+    //auto popup
+    var popupAuto = document.querySelector('#popupAuto');
+    if (popupAuto != null) {
+        $.magnificPopup.open({
+            items: {
+                src: '#popupAuto',
+                type: 'inline'
+            },
+            closeBtnInside: true,
+            closeOnContentClick: false,
+            mainClass: 'mfp-with-zoom mfp-img-mobile',
+            closeMarkup: '<button title="%title%" type="button" class="mfp-close circle circle__imgAuto circle__3 border__white p-0"><img src="images/svg/icon__menuMobileClose.svg"></button>',
+            
+        });
+     }
  
 });
 
