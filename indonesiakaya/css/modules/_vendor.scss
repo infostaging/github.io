@@ -220,7 +220,11 @@
     @extend .circle;
     @extend .circle__3;
     @extend .border__gray5;
-    left: -60px;
+    left: 10px;
+    @include min-responsive($md){
+      left: -60px;
+    }
+ 
   }
     // .mfp-arrow-left:after {
     //   border-right: 17px solid #FFF;
@@ -235,7 +239,11 @@
     @extend .circle;
     @extend .circle__3;
     @extend .border__gray5;
-    right: -60px;
+    
+    right: 10px;
+    @include min-responsive($md){
+      right: -60px;
+    }
   
   }
     // .mfp-arrow-right:after {
