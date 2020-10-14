@@ -950,8 +950,8 @@
         position: absolute;
         right: -20px;
         top: 25px;
-        width: 115px;
-        height: 115px;
+        width: 115px !important;
+        height: 115px !important;
         z-index: 0;
 
         @include min-responsive($md){
@@ -959,13 +959,13 @@
             right: 0;
             bottom: 0;
             margin: auto;
-            height: 100%;
-            width: auto;
+            height: 100% !important;
+            width: auto !important;
         }
 
         &__pustaka{
             right: -85px;
-            width: 230px;
+            width: 230px !important;
             @include min-responsive($md){
                 right: -50px;
                 top: 0;
@@ -976,11 +976,12 @@
         }
         &__kungjungikami{
             right: -25px;
-            width: 135px;
-            height: auto;
+            width: 135px !important;
+            height: auto !important;
 
             @include min-responsive($md){
-                top: -63px;
+                height: auto !important;
+                width: 160px !important;
             }
         }
         &__kungjungikami2{

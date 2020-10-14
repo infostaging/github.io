@@ -342,10 +342,11 @@
             padding-top: 10px;
         }
     }
-
-    .tribe-common img {
-        height: 100% !important;
-        max-width: 100%;
+    .tribe-events-calendar-month-mobile-events__mobile-day .section__img  img {
+        @include max-responsive($md){
+            height: 100% !important;
+            max-width: 100%;
+        }
     }
 
 }    
