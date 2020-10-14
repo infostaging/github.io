@@ -14,6 +14,10 @@ textarea {
     border: none;
     -webkit-user-select:text;
     box-sizing:border-box;
+    @extend .font1;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
 }
 
 select.styled-select  {

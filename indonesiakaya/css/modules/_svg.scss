@@ -1,6 +1,8 @@
 .svg{
     fill:#fff;
     stroke: #fff;
+    height: 25px !important;
+    width: 25px !important;
 
     &__left{
         margin-left: 0;
@@ -12,19 +14,19 @@
     }
 
     &__arrow{
-        height: 0.7rem;
-        width: 0.7rem;   
+        height: 0.7rem !important;
+        width: 0.7rem !important;   
         fill: none;
     }
     &__icon{
-        height: 1.5rem;
-        width: 1.5rem;
+        height: 25px !important;
+        width: 25px !important;
         //stroke-width:0.8;
         fill:none;
 
         &__info{
-            width: 20px;
-            height: 20px;
+            // width: 20px;
+            // height: 20px;
             fill:none;
         }
     }
@@ -34,6 +36,11 @@
     &__bulletin{
         fill:none;
         stroke: $color__gray;
+    }
+    &__auto{
+        width: auto !important;
+        max-width: none !important;
+        height: auto !important;
     }
     
     &__lg{
@@ -58,4 +65,5 @@
         }
         stroke: $color__orange;;
     }
+    
 }
