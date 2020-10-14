@@ -640,6 +640,13 @@
   &-italic{
     font-style: italic;
   }
+
+  &__wrap{
+    overflow: hidden;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    display: -webkit-box;
+  }
 }
 
 .list{
