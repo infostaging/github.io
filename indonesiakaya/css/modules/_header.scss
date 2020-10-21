@@ -12,17 +12,28 @@
 		//border-bottom: 1px solid $color__gray6 !important;
 	}
 
-
 	img{
 		width: auto;
 	}
 	&__logo{
 		text-align: center;
-
+		
 		img{
 			
 			@include min-responsive($md){
-				width: 200px;
+				width: 300px;
+				@include base_transition(all);
+			}
+		}
+	}
+
+	&__scroll{
+
+		& .header__logo{
+			img{	
+				@include min-responsive($md){
+					width: 200px;
+				}
 			}
 		}
 	}
@@ -88,10 +99,10 @@
 			input{
 				border-radius: 0;
 				background: none;
-				border-bottom: 1px solid #fff;
-				border-top: none;
-				border-right: none;
-				border-left: none;
+				border-bottom: 1px solid #fff !important;
+				border-top: none !important;
+				border-right: none !important;
+				border-left: none !important;
 				color: #fff;
 				font-weight: 500;
 				font-size: 20px;
@@ -106,7 +117,8 @@
 				right: 0;
 				bottom: 0;
 				background: none;
-
+				border: none;
+				
 				img{
 					width: 20px;
 					
@@ -119,7 +131,7 @@
 		}
 	}
 	&__home{	
-		@include max-responsive($sm){
+		@include max-responsive($md){
 			display: none;
 		}
 		@include min-responsive($md){
@@ -133,7 +145,7 @@
 		}
 	}
 	&__calender{
-		@include max-responsive($sm){
+		@include max-responsive($md){
 			display: none;
 		}
 		@include min-responsive($md){
@@ -144,7 +156,24 @@
 			&:hover{
 				border-color:#fff;
 			}
+			span{
+				position: absolute;
+				left: -45px;
+				font-size: 18px;
+				opacity: 0;
+				@include base_transition(all);
+			}
+	
+			&:hover{
+	
+				span{
+					left: -50px;
+					opacity: 1;
+				}
+			}
 		}
+
+
 	}
 
 	&__bar{
@@ -294,7 +323,7 @@
 				li{
 
 					a{
-						@extend .color__gray5;
+						@extend .color__gray4;
 					}
 				}
 			}

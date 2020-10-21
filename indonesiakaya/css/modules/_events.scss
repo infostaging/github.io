@@ -87,6 +87,9 @@
     .tribe-events-c-search__input,
     .tribe-events-c-search__input--icon{
         border-bottom: 1px solid $color__gray !important;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
     }
 
     .tribe-events .tribe-events-calendar-month__header-column {
@@ -108,9 +111,6 @@
         opacity: 0.7;
         &:hover{
             opacity: 1;
-            &:before{
-                
-            }
         }
     }
     .tribe-common .tribe-common-c-btn-icon--caret-right:disabled,
@@ -132,6 +132,7 @@
 
         @include min-responsive($md){
             min-height: 300px;
+            overflow: hidden;
         }
     }
     .tribe-events-calendar-month__day-date-daynum{
@@ -139,6 +140,9 @@
         @include min-responsive($md){
             color: $color__gray;
         }
+    }
+    .tribe-common--breakpoint-medium.tribe-events .tribe-events-calendar-month__day {
+        overflow: hidden !important;
     }
 
     //past
@@ -271,7 +275,8 @@
     .tribe-events-header{
         margin-bottom: 30px !important;
     }
-    .tribe-events-calendar-list-nav{
+    .tribe-events-calendar-list-nav,
+    .tribe-events-calendar-day-nav {
 
         .circle{
 
@@ -347,6 +352,17 @@
             height: 100% !important;
             max-width: 100%;
         }
+    }
+
+
+    .tribe-common .tribe-common-svgicon--month{
+        background-image:url(../images/svg/icon__calender__gray.svg) !important;
+    }
+    .tribe-events .tribe-events-c-events-bar__search-button-icon{
+        background-image:url(../images/svg/icon__search__gray.svg) !important;
+    }
+    .tribe-common .tribe-common-c-btn, .tribe-common a.tribe-common-c-btn{
+        @extend .font1;
     }
 
 }    
